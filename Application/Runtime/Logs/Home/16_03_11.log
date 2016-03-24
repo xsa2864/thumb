@@ -1,0 +1,65 @@
+[ 2016-03-11T16:29:53+08:00 ] ::1 /thumb/index.php/home/index/get_sign_str
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.014001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 参数错误或者未定义:params
+
+[ 2016-03-11T16:30:04+08:00 ] ::1 /thumb/index.php/home/index/get_sign_str
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `th_users` [ RunTime:0.0170s ]
+SQL: SELECT * FROM `th_users` WHERE ( AppSecret='test123456' )  [ RunTime:0.0010s ]
+
+[ 2016-03-11T16:34:24+08:00 ] ::1 /thumb/index.php/home/index/get_sign_str
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `th_users` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `th_users` WHERE ( AppSecret='test123456' )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: AppSecret D:\wamp\www\thumb\Application\Home\Controller\IndexController.class.php 第 92 行.
+NOTIC: [8] Undefined index: ValidityTime D:\wamp\www\thumb\Application\Home\Controller\IndexController.class.php 第 93 行.
+NOTIC: [8] Undefined index: CheckTime D:\wamp\www\thumb\Application\Home\Controller\IndexController.class.php 第 94 行.
+
+[ 2016-03-11T16:35:29+08:00 ] ::1 /thumb/index.php/home/index/get_sign_str
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `th_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `th_users` WHERE ( AppSecret='test123456' )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: AppSecret D:\wamp\www\thumb\Application\Home\Controller\IndexController.class.php 第 92 行.
+NOTIC: [8] Undefined index: ValidityTime D:\wamp\www\thumb\Application\Home\Controller\IndexController.class.php 第 93 行.
+NOTIC: [8] Undefined index: CheckTime D:\wamp\www\thumb\Application\Home\Controller\IndexController.class.php 第 94 行.
+
+[ 2016-03-11T16:36:16+08:00 ] ::1 /thumb/index.php/home/index/get_sign_str
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.010000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `th_users` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `th_users` WHERE ( AppSecret='test123456' )  [ RunTime:0.0010s ]
+
+[ 2016-03-11T16:37:41+08:00 ] ::1 /thumb/index.php/home/index/get_sign_str
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `th_users` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `th_users` WHERE ( AppSecret='test123456' )  [ RunTime:0.0000s ]
+

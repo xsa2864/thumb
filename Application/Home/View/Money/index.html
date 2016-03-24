@@ -1,0 +1,60 @@
+<extend name="Public:base" />
+
+<block name="main">
+<br>
+<ul class="sui-breadcrumb">
+    <li><a href="#">首页</a></li>
+    <li class="active">资金列表</li>
+</ul>
+
+<table class="sui-table table-zebra">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>交易时间</th>
+      <th>交易内容</th>
+      <th>金额</th>
+      <th>收支情况</th>
+      <th>交易状态</th>
+      <th>操作</th>
+    </tr>
+  </thead>
+  <tbody>
+    <volist name="data" id="vo" key="k">  
+    <tr>
+      <td>{$k}</td>
+      <td>{$vo.addtime|date="Y-m-d H:i:s",###}</td>
+      <td>{$vo.content}</td>
+      <td>{$vo.money}</td>
+      <td>{$vo.condition}</td>
+      <td>{$vo.status}</td>
+      <td>
+        <a href="{:U('Money/see',array('action'=>'see','mon_id'=>$vo['mon_id']))}">查看</a>
+      </td>
+    </tr>
+    </volist>
+  </tbody>
+</table>
+
+<!-- <div class="sui-pagination">
+  <ul>
+    <li class="prev disabled"><a href="#">«上一页</a></li>
+    <li class="active"><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li class="dotted"><span>...</span></li>
+    <li class="next"><a href="#">下一页»</a></li>
+  </ul>
+  <div><span>共10页&nbsp;</span><span>
+      到
+      <input type="text" class="page-num">
+      <button class="page-confirm" onclick="alert(1)">确定</button>
+      页</span>
+  </div>
+</div> -->
+
+{$page}
+
+</block>

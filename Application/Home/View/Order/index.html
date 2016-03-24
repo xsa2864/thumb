@@ -1,0 +1,105 @@
+<extend name="Public:base" />
+
+<block name="main">
+<br>
+<ul class="sui-breadcrumb">
+    <li><a href="#">首页</a></li>
+    <li class="active">订单列表</li>
+</ul>
+
+<table class="sui-table table-zebra">
+  <thead>
+    <tr>
+      <th>编号</th>
+      <th>订单号</th>
+      <th>购买数量</th>
+      <th>订单状态</th>
+      <th>创建时间</th>
+      <th>操作</th>
+    </tr>
+  </thead>
+  <tbody>
+    <volist name="list" id="vo" key="k">  
+    <tr>
+      <td>{$k}</td>
+      <td>{$vo.orderid}</td>
+      <td>{$vo.number}</td>
+      <td>
+        <if condition="$vo.status eq 0">
+          <div class="sui-msg msg-question">
+            <div class="msg-con"><strong>未付款</strong></div>
+            <s class="msg-icon"></s>
+          </div>        
+        <elseif condition="$vo.status eq 1"/>
+          <div class="sui-msg msg-success">
+            <div class="msg-con"><strong>已付款</strong></div>
+            <s class="msg-icon"></s>
+          </div>        
+        <elseif condition="$vo.status eq 2"/>
+          <div class="sui-msg msg-tips">
+            <div class="msg-con"><strong>申请退货</strong></div>
+            <s class="msg-icon"></s>
+          </div>        
+        <elseif condition="$vo.status eq 3"/>
+          <div class="sui-msg msg-error">
+            <div class="msg-con"><strong>已退款</strong></div>
+            <s class="msg-icon"></s>
+          </div>        
+        <else/>
+          <div class="sui-msg msg-warning">
+            <div class="msg-con"><strong>状态有问题</strong></div>
+            <s class="msg-icon"></s>          
+          </div>
+        </if>
+      </td>
+      <td>{$vo.addtime|date="Y-m-d H:i:s",###}</td>
+      <td>
+        <a href="{:U('Order/see',array('action'=>'see','ord_id'=>$vo['ord_id']))}">查看</a>      
+      </td>
+    </tr>
+    </volist>
+  </tbody>
+</table>
+
+<!-- <div class="sui-pagination">
+  <ul>
+    <li class="prev disabled"><a href="#">«上一页</a></li>
+    <li class="active"><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li class="dotted"><span>...</span></li>
+    <li class="next"><a href="#">下一页»</a></li>
+  </ul>
+  <div><span>共10页&nbsp;</span><span>
+      到
+      <input type="text" class="page-num">
+      <button class="page-confirm" onclick="alert(1)">确定</button>
+      页</span>
+  </div>
+</div> -->
+
+{$page}
+
+<script type="text/javascript">
+  function del(user_id,id){
+    if(confirm("确定删除!")){
+        $.ajax({
+            url:"{:U('Member/del')}",
+            type:'post',
+            data:{action:'del',user_id:user_id},
+            dataType:'json',
+            success:function(data){
+              if(data.code == 1){
+                alert(data.msg);
+                $("tbody tr:nth-child("+id+")").attr("style","display:none");
+              }else{
+                alert(data.msg);
+              }          
+            }
+        })
+    }
+  }
+</script>
+</block>

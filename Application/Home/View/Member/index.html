@@ -1,0 +1,54 @@
+<extend name="Public:base" />
+
+<block name="main">
+<br>
+<ul class="sui-breadcrumb">
+    <li><a href="#">首页</a></li>
+    <li class="active">会员列表</li>
+</ul>
+
+<table class="sui-table table-bordered">
+  <thead>
+    <tr>
+      <th>用户名</th>
+      <th>私有key</th>
+      <th>注册时间</th>
+      <th>操作</th>
+    </tr>
+  </thead>
+  <tbody>
+  	<volist name="data" id="vo" key="k">  	
+	<tr>
+      <td>{$vo.username}</td>
+      <td>{$vo.key}</td>     
+      <td>{$vo.addtime|date='Y-m-d',###}</td>
+      <td>
+        <a href="{:U('Member/edit',array('action'=>'edit','user_id'=>$vo['user_id']))}">编辑</a>
+        <a href="javascript:del({$vo.user_id},{$k})">删除</a>
+      </td>
+    </tr>   
+  	</volist>
+  </tbody>
+</table>
+
+<script type="text/javascript">
+  function del(user_id,id){
+    if(confirm("确定删除!")){
+        $.ajax({
+            url:"{:U('Member/del')}",
+            type:'post',
+            data:{action:'del',user_id:user_id},
+            dataType:'json',
+            success:function(data){
+              if(data.code == 1){
+                alert(data.msg);
+                $("tbody tr:nth-child("+id+")").attr("style","display:none");
+              }else{
+                alert(data.msg);
+              }          
+            }
+        })
+    }
+  }
+</script>
+</block>

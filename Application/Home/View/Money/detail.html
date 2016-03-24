@@ -1,0 +1,105 @@
+<extend name="Public:base" />
+
+<block name="main">
+<br>
+<ul class="sui-breadcrumb">
+    <li><a href="#">首页</a></li>
+    <li><a href="{:U('Money/index')}">资金列表</a></li>
+    <li class="active">资金明细</li>
+</ul>
+
+<h3 style="border-bottom: 2px solid #bbb;">订单详情</h3>
+<div><label>交易号 : {$data.or_trade_code}|  {$data.log_status}</label></div>
+<br>
+订单信息
+<table class="sui-table table-bordered">
+  <thead>
+    <tr>     
+      <th>名称</th>
+      <th>订单号</th>
+      <th>对方</th>
+      <th>支付方式</th>
+      <th>终端</th>
+    </tr>
+  </thead>
+  <notempty name="data.or_orderid">
+    <tbody>   
+      <tr>
+        <td>{$data.or_orderid}</td>
+        <td>{$data.or_orderid}</td>
+        <td>{$data.or_orderid}</td>   
+      </tr>
+    </tbody>
+  </notempty>
+</table>
+
+资金信息
+<table class="sui-table table-bordered">
+  <thead>
+    <tr>     
+      <th>订单金额</th>
+      <th>优惠</th>
+      <th>实付金额</th>
+    </tr>
+  </thead>
+  <notempty name="data.or_goodsamount">
+    <tbody>   
+      <tr>
+        <td>{$data.or_goodsamount}</td>
+        <td>-{$data.discount}</td>
+        <td>={$data.or_goodsamount}</td>   
+      </tr>
+    </tbody>
+  </notempty>
+</table>
+
+退款信息
+<table class="sui-table table-bordered">
+  <thead>
+    <tr>     
+      <th>退款时间</th>
+      <th>退款单号</th>
+      <th>退款金额</th>
+      <th>备注</th>
+    </tr>
+  </thead>
+  <if condition="$data.or_status egt 2">
+    <tbody>   
+      <tr>
+        <td>{$data.or_goodsamount}</td>
+        <td>{$data.discount}</td>
+        <td>{$data.or_goodsamount}</td>   
+      </tr>
+    </tbody>
+  </if>
+</table>
+
+动作流程
+<table class="sui-table table-bordered">
+  <thead>
+    <tr>     
+      <th>流程</th>
+      <th>时间</th>
+      <th>金额</th>
+    </tr>
+  </thead>
+  <tbody>   
+    <tr>
+      <td>创建</td>
+      <td>{$data.or_addtime|date="Y-m-d H:i:s",###}</td>
+      <td>{$data.log_money}</td>   
+    </tr>
+    <tr>
+      <td>支付</td>
+      <td>{$data.or_paytime|date="Y-m-d H:i:s",###}</td>
+      <td>{$data.log_money}</td>   
+    </tr>
+    <tr>
+      <td>交易完成</td>
+      <td>{$data.log_addtime|date="Y-m-d H:i:s",###}</td>
+      <td>{$data.log_money}</td>   
+    </tr>
+  </tbody>
+</table>
+
+</block>

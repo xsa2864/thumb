@@ -1,0 +1,71 @@
+<extend name="Public:base" />
+
+<block name="main">
+<br>
+<ul class="sui-breadcrumb">
+    <li><a href="#">首页</a></li>
+    <li class="active">商品列表</li>
+</ul>
+<p>
+  <a href="{:U('Goods/edit',array('action'=>'add'))}" class="sui-btn btn-info"><i class="sui-icon icon-touch-plus"></i>添加商品</a>
+</p>
+
+<form class="sui-form" action="{:U('Goods/search')}" method="post">  
+  <div class="input-control">
+    <input type="text" placeholder="请输入商品ID" name="goods_id" value="{$search_id}">
+    
+  </div>
+  <button class="sui-btn btn-primary" type="submit">搜索</button>
+</form>
+
+<table class="sui-table table-bordered">
+  <thead>
+    <tr>
+      <th>商品编号</th>
+      <th>品名</th>
+      <th>商品名称</th>
+      <th>价格</th>
+      <th>数量</th>
+      <th>数量单位</th>
+      <th>操作</th>
+    </tr>
+  </thead>
+  <tbody>
+  	<volist name="data" id="vo" key="k">  	
+	<tr>
+      <td>{$vo.goods_id}</td>
+      <td>{$vo.brand}</td>
+      <td>{$vo.goodsname}</td>
+      <td>{$vo.price}</td>
+      <td>{$vo.qty}</td>
+      <td>{$vo.unit}</td>
+      <td>
+        <a href="{:U('Goods/edit',array('action'=>'edit','goods_id'=>$vo['goods_id']))}">编辑</a>
+        <a href="javascript:del({$vo.goods_id},{$k})">删除</a>
+      </td>
+    </tr>   
+  	</volist>
+  </tbody>
+</table>
+
+<script type="text/javascript">
+  function del(goods_id,id){
+    if(confirm("确定删除!")){
+        $.ajax({
+            url:"{:U('Goods/del')}",
+            type:'post',
+            data:{action:'del',goods_id:goods_id},
+            dataType:'json',
+            success:function(data){
+              if(data.code == 1){
+                alert(data.msg);
+                $("tbody tr:nth-child("+id+")").attr("style","display:none");
+              }else{
+                alert(data.msg);
+              }          
+            }
+        })
+    }
+  }
+</script>
+</block>

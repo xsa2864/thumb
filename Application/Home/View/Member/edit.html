@@ -1,0 +1,50 @@
+<extend name="Public:base" />
+
+<block name="main">
+
+<br>
+<ul class="sui-breadcrumb">
+    <li><a href="#">首页</a></li>
+    <li><a href="{:U('Member/index')}">会员管理</a></li>
+    <li class="active">编辑</li>
+</ul>
+
+<form class="sui-form form-horizontal" method="post" action="{:U('Member/edit')}">
+
+  <div class="control-group">
+    <label class="control-label">用户名：</label>
+    <div class="controls">
+      <input type="text" class="input-large" name="username" value="{$data.username}">
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label">key：</label>
+    <div class="controls">
+      <input type="text" class="input-large" name="key" value="{$data.key}">
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label">待定：</label>
+    <div class="controls">
+      <input type="text" class="input-large" name="" value="{$data.unit}">
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label">待定：</label>
+    <div class="controls">
+      <input type="text" class="input-large" name="" value="{$data.price}">
+    </div>
+  </div>
+
+  <div class="control-group">
+    <div class="controls">
+      <input type="hidden" name="action" value="{$action}"></input>
+      <input type="hidden" name="user_id" value="{$data.user_id}"></input>
+      <button type="submit" class="sui-btn btn-primary">保存</button>
+      <button type="reset" class="sui-btn">重置</button>
+    </div>
+  </div>
+
+</form>
+
+</block>

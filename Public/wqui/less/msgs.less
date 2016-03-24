@@ -1,0 +1,198 @@
+//
+// Msgs
+// --------------------------------------------------
+
+
+// GENERAL STYLES
+// --------------
+
+// 小图标坐标定位
+// 基础样式
+.sui-msg {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	position: relative;
+	color: @msgDefaultColor;
+
+  > .msg-icon {
+    .sui-icon;
+    font-size: 14px;
+    font-family: 'icon-pc';
+    text-decoration: none;
+  }
+  strong {
+    color: #333;
+    &:after {
+      content: " ";
+    }
+  }
+  &.msg-error > .msg-icon {
+    &:before {
+      content: "\c60d";
+    }
+  }
+  &.msg-stop > .msg-icon {
+    &:before {
+      content: "\c60b";
+    }
+  }
+  &.msg-success > .msg-icon {
+    &:before {
+      content: "\e601";
+    }
+  }
+  &.msg-warning > .msg-icon {
+    &:before {
+      content: "\c612";
+    }
+  }
+  &.msg-notice > .msg-icon {
+    &:before {
+      content: "\c601";
+    }
+  }
+  &.msg-tips > .msg-icon {
+    &:before {
+      content: "\c609";
+    }
+  }
+  &.msg-info > .msg-icon {
+    &:before {
+      content: "\c60a";
+    }
+  }
+  &.msg-question > .msg-icon {
+    &:before {
+      content: "\c605";
+    }
+  }
+
+
+	> .msg-con {
+		.border-radius(@msgBorderRadius);
+		p {
+      font-weight: normal;
+      margin-bottom: 0;
+      margin-top: @baseLineHeight / 2;
+    }
+	}
+	> .msg-icon {
+		display: inline-block;
+		*display: inline;
+		*zoom: 1;
+		position: absolute;
+	}
+  a.remove {
+    color: #999;
+    font-size: 110%;
+    cursor: pointer;
+    float: right;
+    margin-top: 1px;
+    &:hover {
+      color: #ff5050;
+      text-decoration: none;
+    }
+  }
+}
+
+// 小尺寸（默认尺寸）
+.sui-msg {
+	font-size: @baseFontSize;
+	line-height: @baseLineHeight;
+	vertical-align: middle;
+	> .msg-con { padding: 4px 10px 4px 23px; }
+	> .msg-icon {
+		top: 5px;
+		left: 6px;
+	}
+
+  // 大尺寸
+  &.msg-large {
+    font-size: @fontSizeLarge;
+    line-height: @lineHeightLarge;
+    font-weight: bold;
+    > .msg-con { padding: 11px 11px 11px 44px; }
+    > .msg-icon {
+      top: 12px;
+      left: 11px;
+      font-size: 24px;
+    }
+  }
+
+  // Msgs类型
+  &.msg-error,
+  &.msg-stop
+  {
+    > .msg-icon {
+      color: @msgErrorColor;
+    }
+    > .msg-con {
+      border: 1px solid @msgErrorBorder;
+      background-color: @msgErrorBackground;
+    }
+  }
+  
+  &.msg-success {
+    > .msg-icon {
+      color: @msgSuccessColor;
+    }
+    > .msg-con {
+      border: 1px solid @msgSuccessBorder;
+      background-color: @msgSuccessBackground;
+    }
+  }
+  &.msg-warning,
+  &.msg-notice,
+  &.msg-tips,
+  &.msg-info
+  {
+    > .msg-icon {
+      color: @msgWarningColor;
+    }
+    > .msg-con {
+      border: 1px solid @msgWarningBorder;
+      background-color: @msgWarningBackground;
+    }
+  }
+
+  &.msg-question {
+    > .msg-icon {
+      color: #666;
+    }
+    > .msg-con {
+      border: 1px solid #eaeaea;
+      background-color: #f7f7f7;
+    }
+  }
+
+  // 成块级
+  &.msg-block {
+    display: block;
+    margin-bottom: @baseMargin;
+  }
+
+  // 清除模式
+  &.msg-clear {
+    display: block;
+    > .msg-con {
+      display: inline-block;
+      *display: inline;
+      *zoom: 1;
+    }
+  }
+
+  // 默认字体颜色
+  &.msg-default {
+    color: @msgDefaultColor;
+  }
+
+  // 去边框和底色
+  &.msg-naked {
+    padding: 1px;
+    > .msg-con {
+      border: none;
+      background-color: transparent;
+    }
+  }
+}

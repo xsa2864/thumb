@@ -1,0 +1,679 @@
+[ 2016-03-10T11:08:28+08:00 ] ::1 /thumb/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.097005s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-03-10T11:33:25+08:00 ] ::1 /thumb/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-03-10T11:33:26+08:00 ] ::1 /thumb/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-03-10T14:08:49+08:00 ] ::1 /thumb/index.php/home/index/cancel_order
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:La table 'thumb.think_th_orders' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `think_th_orders`
+ERR: 1146:La table 'thumb.think_th_orders' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `think_th_orders`
+
+[ 2016-03-10T14:09:24+08:00 ] ::1 /thumb/index.php/home/index/cancel_order
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:La table 'thumb.th_th_orders' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `th_th_orders`
+ERR: 1146:La table 'thumb.th_th_orders' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `th_th_orders`
+
+[ 2016-03-10T14:09:38+08:00 ] ::1 /thumb/index.php/home/index/cancel_order
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `th_orders` [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-03-10T14:10:44+08:00 ] ::1 /thumb/index.php/home/index/cancel_order
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `th_orders` [ RunTime:0.0020s ]
+SQL: UPDATE `th_orders` SET `Status`='2' WHERE ( OrderId=20160310 ) [ RunTime:0.0340s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-03-10T14:15:03+08:00 ] ::1 /thumb/index.php/home/index/cancel_order
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `th_orders` [ RunTime:0.0020s ]
+SQL: UPDATE `th_orders` SET `Status`='2' WHERE ( OrderId=20160310 ) [ RunTime:0.0270s ]
+
+[ 2016-03-10T14:15:14+08:00 ] ::1 /thumb/index.php/home/index/cancel_order
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `th_orders` [ RunTime:0.0020s ]
+SQL: UPDATE `th_orders` SET `Status`='2' WHERE ( OrderId=20160310 ) [ RunTime:0.0230s ]
+
+[ 2016-03-10T14:27:40+08:00 ] ::1 /thumb/index.php/home/index/cancel_order
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `th_orders` [ RunTime:0.0020s ]
+SQL: UPDATE `th_orders` SET `Status`='2' WHERE ( OrderId=20160310 ) [ RunTime:0.0320s ]
+NOTIC: [2] Illegal string offset 'name' D:\wamp\www\thumb\Application\Home\Controller\IndexController.class.php 第 37 行.
+NOTIC: [2] Illegal string offset 'sex' D:\wamp\www\thumb\Application\Home\Controller\IndexController.class.php 第 41 行.
+NOTIC: [2] Illegal string offset 'age' D:\wamp\www\thumb\Application\Home\Controller\IndexController.class.php 第 45 行.
+NOTIC: [2] Illegal string offset 'name' D:\wamp\www\thumb\Application\Home\Controller\IndexController.class.php 第 37 行.
+NOTIC: [2] Illegal string offset 'sex' D:\wamp\www\thumb\Application\Home\Controller\IndexController.class.php 第 41 行.
+NOTIC: [2] Illegal string offset 'age' D:\wamp\www\thumb\Application\Home\Controller\IndexController.class.php 第 45 行.
+NOTIC: [2] Illegal string offset 'name' D:\wamp\www\thumb\Application\Home\Controller\IndexController.class.php 第 37 行.
+NOTIC: [2] Illegal string offset 'sex' D:\wamp\www\thumb\Application\Home\Controller\IndexController.class.php 第 41 行.
+NOTIC: [2] Illegal string offset 'age' D:\wamp\www\thumb\Application\Home\Controller\IndexController.class.php 第 45 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-03-10T14:28:28+08:00 ] ::1 /thumb/index.php/home/index/cancel_order
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Illegal string offset 'name' D:\wamp\www\thumb\Application\Home\Controller\IndexController.class.php 第 35 行.
+NOTIC: [2] Illegal string offset 'sex' D:\wamp\www\thumb\Application\Home\Controller\IndexController.class.php 第 39 行.
+NOTIC: [2] Illegal string offset 'age' D:\wamp\www\thumb\Application\Home\Controller\IndexController.class.php 第 43 行.
+NOTIC: [2] Illegal string offset 'name' D:\wamp\www\thumb\Application\Home\Controller\IndexController.class.php 第 35 行.
+NOTIC: [2] Illegal string offset 'sex' D:\wamp\www\thumb\Application\Home\Controller\IndexController.class.php 第 39 行.
+NOTIC: [2] Illegal string offset 'age' D:\wamp\www\thumb\Application\Home\Controller\IndexController.class.php 第 43 行.
+NOTIC: [2] Illegal string offset 'name' D:\wamp\www\thumb\Application\Home\Controller\IndexController.class.php 第 35 行.
+NOTIC: [2] Illegal string offset 'sex' D:\wamp\www\thumb\Application\Home\Controller\IndexController.class.php 第 39 行.
+NOTIC: [2] Illegal string offset 'age' D:\wamp\www\thumb\Application\Home\Controller\IndexController.class.php 第 43 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-03-10T14:28:45+08:00 ] ::1 /thumb/index.php/home/index/cancel_order
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Illegal string offset 'name' D:\wamp\www\thumb\Application\Home\Controller\IndexController.class.php 第 35 行.
+NOTIC: [2] Illegal string offset 'sex' D:\wamp\www\thumb\Application\Home\Controller\IndexController.class.php 第 39 行.
+NOTIC: [2] Illegal string offset 'age' D:\wamp\www\thumb\Application\Home\Controller\IndexController.class.php 第 43 行.
+NOTIC: [2] Illegal string offset 'name' D:\wamp\www\thumb\Application\Home\Controller\IndexController.class.php 第 35 行.
+NOTIC: [2] Illegal string offset 'sex' D:\wamp\www\thumb\Application\Home\Controller\IndexController.class.php 第 39 行.
+NOTIC: [2] Illegal string offset 'age' D:\wamp\www\thumb\Application\Home\Controller\IndexController.class.php 第 43 行.
+NOTIC: [2] Illegal string offset 'name' D:\wamp\www\thumb\Application\Home\Controller\IndexController.class.php 第 35 行.
+NOTIC: [2] Illegal string offset 'sex' D:\wamp\www\thumb\Application\Home\Controller\IndexController.class.php 第 39 行.
+NOTIC: [2] Illegal string offset 'age' D:\wamp\www\thumb\Application\Home\Controller\IndexController.class.php 第 43 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-03-10T14:32:23+08:00 ] ::1 /thumb/index.php/home/index/cancel_order
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: dat D:\wamp\www\thumb\Application\Home\Controller\IndexController.class.php 第 34 行.
+NOTIC: [8] Undefined variable: dat D:\wamp\www\thumb\Application\Home\Controller\IndexController.class.php 第 34 行.
+NOTIC: [8] Undefined variable: dat D:\wamp\www\thumb\Application\Home\Controller\IndexController.class.php 第 34 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-03-10T14:32:25+08:00 ] ::1 /thumb/index.php/home/index/cancel_order
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: dat D:\wamp\www\thumb\Application\Home\Controller\IndexController.class.php 第 34 行.
+NOTIC: [8] Undefined variable: dat D:\wamp\www\thumb\Application\Home\Controller\IndexController.class.php 第 34 行.
+NOTIC: [8] Undefined variable: dat D:\wamp\www\thumb\Application\Home\Controller\IndexController.class.php 第 34 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-03-10T14:32:58+08:00 ] ::1 /thumb/index.php/home/index/cancel_order
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-03-10T14:34:26+08:00 ] ::1 /thumb/index.php/home/index/cancel_order
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015600s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-03-10T14:41:20+08:00 ] ::1 /thumb/index.php/home/index/cancel_order
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:La table 'thumb.th_th_orders' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `th_th_orders`
+ERR: 1146:La table 'thumb.th_th_orders' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `th_th_orders`
+
+[ 2016-03-10T14:41:35+08:00 ] ::1 /thumb/index.php/home/index/cancel_order
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015600s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `th_orders` [ RunTime:0.0010s ]
+SQL: UPDATE `th_orders` SET `Status`='2' WHERE ( OrderId=20160310 ) [ RunTime:0.0270s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-03-10T14:47:04+08:00 ] ::1 /thumb/index.php/home/index/cancel_order
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `th_orders` [ RunTime:0.0010s ]
+ERR: 1054:Champ 'test123456' inconnu dans where clause
+ [ SQL语句 ] : UPDATE `th_orders` SET `Status`='2' WHERE ( OrderId=20160310 and AppSecret=test123456 )
+ERR: 1054:Champ 'test123456' inconnu dans where clause
+ [ SQL语句 ] : UPDATE `th_orders` SET `Status`='2' WHERE ( OrderId=20160310 and AppSecret=test123456 )
+
+[ 2016-03-10T14:47:49+08:00 ] ::1 /thumb/index.php/home/index/cancel_order
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015600s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015600s ]
+SQL: SHOW COLUMNS FROM `th_orders` [ RunTime:0.0010s ]
+SQL: UPDATE `th_orders` SET `Status`='2' WHERE ( OrderId='20160310' and AppSecret='test123456' ) [ RunTime:0.0330s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-03-10T14:47:58+08:00 ] ::1 /thumb/index.php/home/index/cancel_order
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `th_orders` [ RunTime:0.0020s ]
+SQL: UPDATE `th_orders` SET `Status`='2' WHERE ( OrderId='20160310' and AppSecret='test123456' ) [ RunTime:0.0220s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-03-10T14:51:45+08:00 ] ::1 /thumb/index.php/home/index/order_status
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015600s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015600s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-03-10T14:52:14+08:00 ] ::1 /thumb/index.php/home/index/order_status
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-03-10T14:52:38+08:00 ] ::1 /thumb/index.php/home/index/order_status
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-03-10T16:15:53+08:00 ] ::1 /thumb/index.php/home/index/order_status
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `th_orders` [ RunTime:0.0020s ]
+SQL: SELECT `Status`,`LogisticsNo` FROM `th_orders` WHERE ( OrderId='20160310' and AppSecret='test123456' )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-03-10T16:16:28+08:00 ] ::1 /thumb/index.php/home/index/order_status
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `th_orders` [ RunTime:0.0000s ]
+SQL: SELECT `Status`,`LogisticsNo` FROM `th_orders` WHERE ( OrderId='20160310' and AppSecret='test123456' )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-03-10T16:18:04+08:00 ] ::1 /thumb/index.php/home/index/order_status
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `th_orders` [ RunTime:0.0020s ]
+SQL: SELECT `Status`,`LogisticsNo` FROM `th_orders` WHERE ( OrderId='20160310' and AppSecret='test123456' )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-03-10T16:18:05+08:00 ] ::1 /thumb/index.php/home/index/order_status
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `th_orders` [ RunTime:0.0030s ]
+SQL: SELECT `Status`,`LogisticsNo` FROM `th_orders` WHERE ( OrderId='20160310' and AppSecret='test123456' )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-03-10T16:18:05+08:00 ] ::1 /thumb/index.php/home/index/order_status
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015600s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015600s ]
+SQL: SHOW COLUMNS FROM `th_orders` [ RunTime:0.0000s ]
+SQL: SELECT `Status`,`LogisticsNo` FROM `th_orders` WHERE ( OrderId='20160310' and AppSecret='test123456' )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-03-10T16:18:05+08:00 ] ::1 /thumb/index.php/home/index/order_status
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `th_orders` [ RunTime:0.0020s ]
+SQL: SELECT `Status`,`LogisticsNo` FROM `th_orders` WHERE ( OrderId='20160310' and AppSecret='test123456' )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-03-10T16:18:15+08:00 ] ::1 /thumb/index.php/home/index/order_status
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `th_orders` [ RunTime:0.0000s ]
+SQL: SELECT `Status`,`LogisticsNo` FROM `th_orders` WHERE ( OrderId='20160310' and AppSecret='test123456' )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-03-10T16:18:16+08:00 ] ::1 /thumb/index.php/home/index/order_status
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `th_orders` [ RunTime:0.0030s ]
+SQL: SELECT `Status`,`LogisticsNo` FROM `th_orders` WHERE ( OrderId='20160310' and AppSecret='test123456' )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-03-10T16:18:23+08:00 ] ::1 /thumb/index.php/home/index/order_status
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `th_orders` [ RunTime:0.0020s ]
+SQL: SELECT `LogisticsNo` FROM `th_orders` WHERE ( OrderId='20160310' and AppSecret='test123456' ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2016-03-10T16:18:45+08:00 ] ::1 /thumb/index.php/home/index/order_status
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `th_orders` [ RunTime:0.0000s ]
+SQL: SELECT `OrderId`,`LogisticsNo` FROM `th_orders` WHERE ( OrderId='20160310' and AppSecret='test123456' )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-03-10T16:18:55+08:00 ] ::1 /thumb/index.php/home/index/order_status
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `th_orders` [ RunTime:0.0020s ]
+SQL: SELECT `OrderId`,`AppSecret`,`LogisticsNo` FROM `th_orders` WHERE ( OrderId='20160310' and AppSecret='test123456' )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-03-10T16:19:44+08:00 ] ::1 /thumb/index.php/home/index/order_status
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `th_orders` [ RunTime:0.0010s ]
+SQL: SELECT `OrderId`,`AppSecret`,`LogisticsNo` FROM `th_orders` WHERE ( OrderId='20160310' and AppSecret='test123456' )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-03-10T16:19:45+08:00 ] ::1 /thumb/index.php/home/index/order_status
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `th_orders` [ RunTime:0.0030s ]
+SQL: SELECT `OrderId`,`AppSecret`,`LogisticsNo` FROM `th_orders` WHERE ( OrderId='20160310' and AppSecret='test123456' )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-03-10T16:20:12+08:00 ] ::1 /thumb/index.php/home/index/order_status
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `th_orders` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `th_orders` WHERE ( OrderId='20160310' and AppSecret='test123456' ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-03-10T16:27:56+08:00 ] ::1 /thumb/index.php/home/index/order_status
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `th_orders` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `th_orders` WHERE ( OrderId='20160310' and AppSecret='test123456' ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-03-10T16:27:59+08:00 ] ::1 /thumb/index.php/home/index/order_status
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015600s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015600s ]
+SQL: SHOW COLUMNS FROM `th_orders` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `th_orders` WHERE ( OrderId='20160310' and AppSecret='test123456' ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-03-10T16:32:52+08:00 ] ::1 /thumb/index.php/home/index/order_status
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: select status,logisticsno from th_orders where OrderId='20160310' and AppSecret='test123456' [ RunTime:0.0000s ]
+
+[ 2016-03-10T16:33:45+08:00 ] ::1 /thumb/index.php/home/index/order_status
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: select status,logisticsno from th_orders where OrderId='20160310' and AppSecret='test123456' limit 1 [ RunTime:0.0000s ]
+
+[ 2016-03-10T16:33:45+08:00 ] ::1 /thumb/index.php/home/index/order_status
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: select status,logisticsno from th_orders where OrderId='20160310' and AppSecret='test123456' limit 1 [ RunTime:0.0000s ]
+
+[ 2016-03-10T16:33:46+08:00 ] ::1 /thumb/index.php/home/index/order_status
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: select status,logisticsno from th_orders where OrderId='20160310' and AppSecret='test123456' limit 1 [ RunTime:0.0010s ]
+
+[ 2016-03-10T16:39:57+08:00 ] ::1 /thumb/index.php/home/index/order_status
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `th_orders` [ RunTime:0.0030s ]
+SQL: SELECT `status`,`logisticsno` FROM `th_orders` WHERE ( OrderId='20160310' and AppSecret='test123456' )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: status D:\wamp\www\thumb\Application\Home\Controller\IndexController.class.php 第 69 行.
+NOTIC: [8] Undefined index: status D:\wamp\www\thumb\Application\Home\Controller\IndexController.class.php 第 70 行.
+NOTIC: [8] Undefined index:  D:\wamp\www\thumb\Application\Home\Controller\IndexController.class.php 第 70 行.
+NOTIC: [8] Undefined index: logisticsno D:\wamp\www\thumb\Application\Home\Controller\IndexController.class.php 第 71 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2016-03-10T16:40:18+08:00 ] ::1 /thumb/index.php/home/index/order_status
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `th_orders` [ RunTime:0.0020s ]
+SQL: SELECT `status`,`logisticsno` FROM `th_orders` WHERE ( OrderId='20160310' and AppSecret='test123456' )  [ RunTime:0.0000s ]
+
+[ 2016-03-10T16:41:25+08:00 ] ::1 /thumb/index.php/home/index/order_status
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `th_orders` [ RunTime:0.0000s ]
+SQL: SELECT `status`,`logisticsno` FROM `th_orders` WHERE ( OrderId='20160310' and AppSecret='test123456' )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.015600s ]
+INFO: [ app_end ] --END-- [ RunTime:0.015600s ]
+
+[ 2016-03-10T16:41:27+08:00 ] ::1 /thumb/index.php/home/index/order_status
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `th_orders` [ RunTime:0.0030s ]
+SQL: SELECT `status`,`logisticsno` FROM `th_orders` WHERE ( OrderId='20160310' and AppSecret='test123456' )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-03-10T16:42:02+08:00 ] ::1 /thumb/index.php/home/index/order_status
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `th_orders` [ RunTime:0.0020s ]
+SQL: SELECT `status`,`logisticsno` FROM `th_orders` WHERE ( OrderId='20160310' and AppSecret='test123456' ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 D:\wamp\www\thumb\Application\Home\Controller\IndexController.class.php 第 70 行.
+NOTIC: [8] Undefined offset: 0 D:\wamp\www\thumb\Application\Home\Controller\IndexController.class.php 第 71 行.
+NOTIC: [8] Undefined index:  D:\wamp\www\thumb\Application\Home\Controller\IndexController.class.php 第 71 行.
+NOTIC: [8] Undefined offset: 0 D:\wamp\www\thumb\Application\Home\Controller\IndexController.class.php 第 72 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-03-10T16:42:14+08:00 ] ::1 /thumb/index.php/home/index/order_status
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `th_orders` [ RunTime:0.0020s ]
+SQL: SELECT `status`,`logisticsno` FROM `th_orders` WHERE ( OrderId='20160310' and AppSecret='test123456' ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2016-03-10T16:42:35+08:00 ] ::1 /thumb/index.php/home/index/order_status
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `th_orders` [ RunTime:0.0020s ]
+SQL: SELECT `status`,`logisticsno` FROM `th_orders` WHERE ( OrderId='20160310' and AppSecret='test123456' ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-03-10T16:42:40+08:00 ] ::1 /thumb/index.php/home/index/order_status
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `th_orders` [ RunTime:0.0020s ]
+SQL: SELECT `status`,`logisticsno` FROM `th_orders` WHERE ( OrderId='20160310' and AppSecret='test123456' ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+

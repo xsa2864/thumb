@@ -1,0 +1,163 @@
+<extend name="Public:base" />
+
+<block name="main">
+<br>
+<ul class="sui-breadcrumb">
+
+    <li><a href="#">首页</a></li>
+    <li><a href="{:U('Order/index')}">订单列表</a></li>
+    <li class="active">查看</li>
+</ul>
+
+<form class="sui-form sui-row-fluid form-horizontal" id="filterForm" action="" method="post">
+      <div class="span4">
+        <div class="control-group">
+          <label class="control-label" for="input004">订单号：</label>
+          <label for="input002"> {$orders.orderid} </label>    
+        </div>
+        <div class="control-group">
+          <label class="control-label" for="input001">创建时间：</label>
+          <label for="input002"> {$orders.addtime|date="Y-m-d H:i:s",###} </label>          
+        </div>
+        <div class="control-group">
+          <label class="control-label" for="input003">成交时间：</label>
+          <label for="input002"> {$orders.paytime|date="Y-m-d H:i:s",###} </label>
+        </div>
+      </div>
+      <div class="span4">
+        <div class="control-group">
+          <label class="control-label" for="input005">收件人姓名：</label>
+          <label for="input002"> {$orders.realname} </label>
+        </div>
+        <div class="control-group">
+          <label class="control-label" for="input006">收件人电话：</label>
+          <label for="input002"> {$orders.mobile} </label>
+        </div>
+        <div class="control-group">
+          <label class="control-label" for="input007">收件人地址：</label>
+          <label for="input002"> {$orders.address} </label>
+        </div>
+      </div>
+      <div class="span4">
+        <div class="control-group">
+          <label class="control-label" for="select001">待定：</label>
+          <label for="input002"> 待定 </label>
+        </div>
+        <div class="control-group">
+          <label class="control-label" for="select002">待定：</label>
+          <label for="input002"> 待定 </label>
+        </div>
+        <div class="control-group">
+          <label class="control-label" for="select003">订单状态：</label>
+          <label for="input003"> 
+            <if condition="$orders.status eq 1">
+              已付款
+              <else if condition="$orders.status eq 2">
+              申请退货
+              <else if condition="$orders.status eq 3">
+              已退款
+              <else/>
+              未付款
+            </if> 
+          </label>
+        </div>
+      </div>
+</form>
+
+<table class="sui-table sui-table-nobody">
+  <thead>
+    <tr>
+      <th width="8%">
+        <label class="checkbox"><input type="checkbox" name="">全选</label>
+      </th>
+      <th class="center" width="22%">商品</th>
+      <th class="center" width="10%">零售价(元)
+          <i class="sui-glyphicon glyphicon-question-sign sui-text-warning" title="就是零售的价格..."></i></th>
+      <th class="center" width="10%">付款金额(元)</th>
+      <th class="center" width="10%">数量</th>
+      <th class="center" width="10%">操作</th>
+      <th class="center" width="10%">分销商</th>
+      <th class="center" width="10%">实收款(元)</th>
+      <th class="center" width="10%">采购状态/操作</th>
+    </tr>
+  </thead>
+</table>
+<table class="sui-table sui-table-bordered">
+  <thead>
+    <tr>
+      <th colspan="9" class="sui-muted">
+        <label class="checkbox pull-left">
+          <input type="checkbox" name=""> 2) 
+          <span class="sui-label sui-label-important">经销</span>
+          分销流水号：212500 订单编号：{$orders.orderid} 收货人：未免 
+          <i class="sui-glyphicon glyphicon-filter"></i>
+        </label>
+        <span class="pull-right">成交时间：{$orders.paytime|date="Y-m-d H:i:s",###} 
+          <i class="sui-glyphicon glyphicon-flag"></i>
+        </span>
+      </th>
+    </tr>
+  </thead>
+
+  <tbody> 
+    <volist name="orders_info" id="vo" key="k">    
+      <tr>
+        <td colspan="2" width="30%">
+          <div class="typographic clearfix">
+            <img src="{$vo.img}" alt="">
+            <span>
+              <a href="">{$vo.goodsname} <i class="sui-glyphicon glyphicon-ok-sign"></i></a>
+              <br>商家编号：{$vo.goods_id}
+            </span>
+          </div>
+        </td>
+        <td class="center left-con" width="10%">122.00</td>
+        <td class="center left-con" width="10%">{$vo.price}</td>
+        <td class="center left-con" width="10%">{$vo.qty}</td>
+        <td class="center left-con" width="10%"><a href=""></a></td>
+
+        <if condition="$k eq 1">
+           <td class="center" width="10%" rowspan="{$count}">
+             <a href="">yexue</a><br>
+           </td>
+           <td class="center" width="10%" rowspan="{$count}">
+             <span class="sui-text-warning price">{$orders.goodsamount}</span><br>
+             <span class="sui-muted">
+                <if condition="$orders.postfree eq 0">(供应商包邮)<else/>(供应商不包邮)</if>
+             </span>
+             <br>
+           </td>
+           <td class="center" width="10%" rowspan="{$count}">
+              
+             付款信息待确认，待发货<hr>
+             <a href="" class="sui-btn btn-primary">确认发货</a><br>             
+           </td>
+        </if>
+
+      </tr>
+    </volist>
+  </tbody>
+</table>
+
+
+<script type="text/javascript">
+  function del(user_id,id){
+    if(confirm("确定删除!")){
+        $.ajax({
+            url:"{:U('Member/del')}",
+            type:'post',
+            data:{action:'del',user_id:user_id},
+            dataType:'json',
+            success:function(data){
+              if(data.code == 1){
+                alert(data.msg);
+                $("tbody tr:nth-child("+id+")").attr("style","display:none");
+              }else{
+                alert(data.msg);
+              }          
+            }
+        })
+    }
+  }
+</script>
+</block>
