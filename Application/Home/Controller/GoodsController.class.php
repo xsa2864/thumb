@@ -13,6 +13,7 @@ class GoodsController extends Controller {
 	
 	// 商品编辑
 	public function edit(){
+
 		$goods_id = I('goods_id',0);
 		$action = I('action','');
 

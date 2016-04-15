@@ -8,13 +8,29 @@
 </script>
 <body>
 
-<form action="{:U('Index/op_thumb')}" method="post">
+
+
+<form action="http://115.238.169.185:8080/index.php?g=admin&m=ApiOrderNew&a=OrderPostXml" method="post">
 <h3>生成订单</h3>
-user_id: <input type="text" name="user_id" value="1"/>
-data:  	<input type="text" name="data" value='{"action":"mk_orders","orderid":"20160311","realname":"张三","mobile":"15312301238","address":"福州鼓楼","items":[{"goods_id":"1","qty":"2","unit":"个"},{"goods_id":"2","qty":"1","unit":"箱"}]}'/>
-time:  	<input type="text" name="time" value="{$time}"/>
-key:  	<input type="text" name="key" value="test123456"/>
-<br>
+OrderFrom: 		<input type="text" name="OrderFrom" value="0000"/><br>
+OrderNo:  		<input type="text" name="OrderNo" value='20160324'/><br>
+DistributorId:  <input type="text" name="DistributorId" value=""/><br>
+AppSecret:  	<input type="text" name="AppSecret" value="test123456"/><br>
+GoodsAmount: 	<input type="text" name="GoodsAmount" value=""/><br>
+PostFee:  		<input type="text" name="PostFee" value=''/><br>
+Amount:  		<input type="text" name="Amount" value=""/><br>
+BuyerAccount:  	<input type="text" name="BuyerAccount" value=""/><br>
+Date: 			<input type="text" name="Date" value=""/><br>
+TaxAmunt:  		<input type="text" name="TaxAmunt" value=''/><br>
+DisAmount:  	<input type="text" name="DisAmount" value=""/><br>
+CurrCode:  		<input type="text" name="CurrCode" value=""/><br>
+LogisticsName: 	<input type="text" name="LogisticsName" value=""/><br>
+City:  			<input type="text" name="City" value=''/><br>
+District:  		<input type="text" name="District" value=""/><br>
+ConsigneeAddr:  <input type="text" name="ConsigneeAddr" value=""/><br>
+ConsigneeTel:  	<input type="text" name="ConsigneeTel" value=""/><br>
+payDate:  		<input type="text" name="payDate" value=""/><br>
+
 code:	<input type="text" name="code" value="97a777960c0362d98802cda7b211abce"/>	
 <br>
   	<input type="submit" value="Submit" />
@@ -81,6 +97,21 @@ code:	<input type="text" name="code" value="a9d33b40ba4c85bbaeea8f6c72ab20a0"/>
   	<input type="submit" value="Submit" />
 </form>
 
+
+<form action="{$params.url}" method="post">
+<h3>获取库存</h3>
+system: <input type="text" name="system" value="{$params.system}"/>
+<br>
+DistributorId:  	<input type="text" name="DistributorId" value='{$params.DistributorId}'/>
+<br>
+pageRows:  	<input type="text" name="pageRows" value="{$params.pageRows}"/>
+<br>
+pageSum:  	<input type="text" name="pageSum" value="{$params.pageSum}"/>
+<br>
+signStr:	<input type="text" name="signStr" value="{$params.signStr}"/>	
+<br>
+  	<input type="submit" value="Submit" />
+</form>
 
 </body>
 </html>
