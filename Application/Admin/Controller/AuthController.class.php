@@ -1,12 +1,14 @@
 <?php 
 namespace Admin\Controller;
 use Admin\Controller\AdminController;
-class AuthController extends AdminController{
+use Think\Controller;
+
+class AuthController extends Controller{
 
 	public function accessList(){
 		$m=D('RuleView');
 		$count=$m->count();
-		$page=new \Think\Page($count,5);
+		$page=new \Think\Page($count,20);
 		$page->setConfig('theme','%FIRST% %UP_PAGE% %LINK_PAGE% %DOWN_PAGE% %END% %HEADER%');
 		$show=$page->show();
 		$data=$m->limit($page->firstRow.','.$page->listRows)->order('id desc')->select();

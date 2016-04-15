@@ -1,0 +1,1734 @@
+[ 2016-04-15T16:17:20+08:00 ] ::1 /thumb/index.php/Admin/Auth/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-04-15T16:17:20+08:00 ] ::1 /thumb/index.php/Admin/Login/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 非法操作:index
+
+[ 2016-04-15T16:17:29+08:00 ] ::1 /thumb/index.php/Admin/Login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2016-04-15T16:17:29+08:00 ] ::1 /thumb/index.php/Admin/Public/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-04-15T16:32:36+08:00 ] ::1 /thumb/index.php/Admin/login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-15T16:32:36+08:00 ] ::1 /thumb/index.php/Admin/Public/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-15T16:32:37+08:00 ] ::1 /thumb/index.php/Admin/Public/verify.html?time=0.09355860180221498
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-15T16:32:38+08:00 ] ::1 /thumb/index.php/Admin/Public/verify.html?time=0.09355860180221498?time=0.9955932125449181
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-15T16:32:44+08:00 ] ::1 /thumb/index.php/Admin/Public/verify.html?time=0.09355860180221498?time=0.9955932125449181?time=0.4266140644904226
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-04-15T16:32:45+08:00 ] ::1 /thumb/index.php/Admin/Public/verify.html?time=0.09355860180221498?time=0.9955932125449181?time=0.4266140644904226?time=0.6129341581836343
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-15T16:32:46+08:00 ] ::1 /thumb/index.php/Admin/Public/verify.html?time=0.09355860180221498?time=0.9955932125449181?time=0.4266140644904226?time=0.6129341581836343?time=0.34124902822077274
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-04-15T16:32:46+08:00 ] ::1 /thumb/index.php/Admin/Public/verify.html?time=0.09355860180221498?time=0.9955932125449181?time=0.4266140644904226?time=0.6129341581836343?time=0.34124902822077274?time=0.3495514893438667
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-04-15T16:32:47+08:00 ] ::1 /thumb/index.php/Admin/Public/verify.html?time=0.09355860180221498?time=0.9955932125449181?time=0.4266140644904226?time=0.6129341581836343?time=0.34124902822077274?time=0.3495514893438667?time=0.04106086934916675
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-15T16:32:48+08:00 ] ::1 /thumb/index.php/Admin/Public/verify.html?time=0.09355860180221498?time=0.9955932125449181?time=0.4266140644904226?time=0.6129341581836343?time=0.34124902822077274?time=0.3495514893438667?time=0.04106086934916675?time=0.3300652012694627
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-15T16:32:49+08:00 ] ::1 /thumb/index.php/Admin/Public/verify.html?time=0.09355860180221498?time=0.9955932125449181?time=0.4266140644904226?time=0.6129341581836343?time=0.34124902822077274?time=0.3495514893438667?time=0.04106086934916675?time=0.3300652012694627?time=0.7041638884693384
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-15T16:32:50+08:00 ] ::1 /thumb/index.php/Admin/Public/verify.html?time=0.09355860180221498?time=0.9955932125449181?time=0.4266140644904226?time=0.6129341581836343?time=0.34124902822077274?time=0.3495514893438667?time=0.04106086934916675?time=0.3300652012694627?time=0.7041638884693384?time=0.44866307312622666
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-15T16:32:51+08:00 ] ::1 /thumb/index.php/Admin/Public/verify.html?time=0.09355860180221498?time=0.9955932125449181?time=0.4266140644904226?time=0.6129341581836343?time=0.34124902822077274?time=0.3495514893438667?time=0.04106086934916675?time=0.3300652012694627?time=0.7041638884693384?time=0.44866307312622666?time=0.2691088302526623
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-15T16:32:58+08:00 ] ::1 /thumb/index.php/Admin/Public/verify.html?time=0.09355860180221498?time=0.9955932125449181?time=0.4266140644904226?time=0.6129341581836343?time=0.34124902822077274?time=0.3495514893438667?time=0.04106086934916675?time=0.3300652012694627?time=0.7041638884693384?time=0.44866307312622666?time=0.2691088302526623?time=0.5342354527674615
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-04-15T16:33:00+08:00 ] ::1 /thumb/index.php/Admin/Public/verify.html?time=0.09355860180221498?time=0.9955932125449181?time=0.4266140644904226?time=0.6129341581836343?time=0.34124902822077274?time=0.3495514893438667?time=0.04106086934916675?time=0.3300652012694627?time=0.7041638884693384?time=0.44866307312622666?time=0.2691088302526623?time=0.5342354527674615?time=0.2623178439680487
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-15T16:33:01+08:00 ] ::1 /thumb/index.php/Admin/Public/verify.html?time=0.09355860180221498?time=0.9955932125449181?time=0.4266140644904226?time=0.6129341581836343?time=0.34124902822077274?time=0.3495514893438667?time=0.04106086934916675?time=0.3300652012694627?time=0.7041638884693384?time=0.44866307312622666?time=0.2691088302526623?time=0.5342354527674615?time=0.2623178439680487?time=0.09678270015865564
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-04-15T16:33:01+08:00 ] ::1 /thumb/index.php/Admin/Public/verify.html?time=0.09355860180221498?time=0.9955932125449181?time=0.4266140644904226?time=0.6129341581836343?time=0.34124902822077274?time=0.3495514893438667?time=0.04106086934916675?time=0.3300652012694627?time=0.7041638884693384?time=0.44866307312622666?time=0.2691088302526623?time=0.5342354527674615?time=0.2623178439680487?time=0.09678270015865564?time=0.12018689676187932
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-15T16:33:01+08:00 ] ::1 /thumb/index.php/Admin/Public/verify.html?time=0.09355860180221498?time=0.9955932125449181?time=0.4266140644904226?time=0.6129341581836343?time=0.34124902822077274?time=0.3495514893438667?time=0.04106086934916675?time=0.3300652012694627?time=0.7041638884693384?time=0.44866307312622666?time=0.2691088302526623?time=0.5342354527674615?time=0.2623178439680487?time=0.09678270015865564?time=0.12018689676187932?time=0.10253857052884996
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-15T16:33:01+08:00 ] ::1 /thumb/index.php/Admin/Public/verify.html?time=0.09355860180221498?time=0.9955932125449181?time=0.4266140644904226?time=0.6129341581836343?time=0.34124902822077274?time=0.3495514893438667?time=0.04106086934916675?time=0.3300652012694627?time=0.7041638884693384?time=0.44866307312622666?time=0.2691088302526623?time=0.5342354527674615?time=0.2623178439680487?time=0.09678270015865564?time=0.12018689676187932?time=0.10253857052884996?time=0.9029724814463407
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2016-04-15T16:33:02+08:00 ] ::1 /thumb/index.php/Admin/Public/verify.html?time=0.09355860180221498?time=0.9955932125449181?time=0.4266140644904226?time=0.6129341581836343?time=0.34124902822077274?time=0.3495514893438667?time=0.04106086934916675?time=0.3300652012694627?time=0.7041638884693384?time=0.44866307312622666?time=0.2691088302526623?time=0.5342354527674615?time=0.2623178439680487?time=0.09678270015865564?time=0.12018689676187932?time=0.10253857052884996?time=0.9029724814463407?time=0.35016643651761115
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-15T16:33:02+08:00 ] ::1 /thumb/index.php/Admin/Public/verify.html?time=0.09355860180221498?time=0.9955932125449181?time=0.4266140644904226?time=0.6129341581836343?time=0.34124902822077274?time=0.3495514893438667?time=0.04106086934916675?time=0.3300652012694627?time=0.7041638884693384?time=0.44866307312622666?time=0.2691088302526623?time=0.5342354527674615?time=0.2623178439680487?time=0.09678270015865564?time=0.12018689676187932?time=0.10253857052884996?time=0.9029724814463407?time=0.35016643651761115?time=0.131459683412686
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-15T16:33:02+08:00 ] ::1 /thumb/index.php/Admin/Public/verify.html?time=0.09355860180221498?time=0.9955932125449181?time=0.4266140644904226?time=0.6129341581836343?time=0.34124902822077274?time=0.3495514893438667?time=0.04106086934916675?time=0.3300652012694627?time=0.7041638884693384?time=0.44866307312622666?time=0.2691088302526623?time=0.5342354527674615?time=0.2623178439680487?time=0.09678270015865564?time=0.12018689676187932?time=0.10253857052884996?time=0.9029724814463407?time=0.35016643651761115?time=0.131459683412686?time=0.47039064951241016
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-15T16:33:02+08:00 ] ::1 /thumb/index.php/Admin/Public/verify.html?time=0.09355860180221498?time=0.9955932125449181?time=0.4266140644904226?time=0.6129341581836343?time=0.34124902822077274?time=0.3495514893438667?time=0.04106086934916675?time=0.3300652012694627?time=0.7041638884693384?time=0.44866307312622666?time=0.2691088302526623?time=0.5342354527674615?time=0.2623178439680487?time=0.09678270015865564?time=0.12018689676187932?time=0.10253857052884996?time=0.9029724814463407?time=0.35016643651761115?time=0.131459683412686?time=0.47039064951241016?time=0.014243273064494133
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-04-15T16:33:06+08:00 ] ::1 /thumb/index.php/Admin/Public/verify.html?time=0.09355860180221498?time=0.9955932125449181?time=0.4266140644904226?time=0.6129341581836343?time=0.34124902822077274?time=0.3495514893438667?time=0.04106086934916675?time=0.3300652012694627?time=0.7041638884693384?time=0.44866307312622666?time=0.2691088302526623?time=0.5342354527674615?time=0.2623178439680487?time=0.09678270015865564?time=0.12018689676187932?time=0.10253857052884996?time=0.9029724814463407?time=0.35016643651761115?time=0.131459683412686?time=0.47039064951241016?time=0.014243273064494133?time=0.8126088045537472
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-15T16:33:07+08:00 ] ::1 /thumb/index.php/Admin/Public/verify.html?time=0.09355860180221498?time=0.9955932125449181?time=0.4266140644904226?time=0.6129341581836343?time=0.34124902822077274?time=0.3495514893438667?time=0.04106086934916675?time=0.3300652012694627?time=0.7041638884693384?time=0.44866307312622666?time=0.2691088302526623?time=0.5342354527674615?time=0.2623178439680487?time=0.09678270015865564?time=0.12018689676187932?time=0.10253857052884996?time=0.9029724814463407?time=0.35016643651761115?time=0.131459683412686?time=0.47039064951241016?time=0.014243273064494133?time=0.8126088045537472?time=0.9641201160848141
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-04-15T16:33:07+08:00 ] ::1 /thumb/index.php/Admin/Public/verify.html?time=0.09355860180221498?time=0.9955932125449181?time=0.4266140644904226?time=0.6129341581836343?time=0.34124902822077274?time=0.3495514893438667?time=0.04106086934916675?time=0.3300652012694627?time=0.7041638884693384?time=0.44866307312622666?time=0.2691088302526623?time=0.5342354527674615?time=0.2623178439680487?time=0.09678270015865564?time=0.12018689676187932?time=0.10253857052884996?time=0.9029724814463407?time=0.35016643651761115?time=0.131459683412686?time=0.47039064951241016?time=0.014243273064494133?time=0.8126088045537472?time=0.9641201160848141?time=0.957028818083927
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-15T16:33:23+08:00 ] ::1 /thumb/index.php/Admin/login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-04-15T16:33:23+08:00 ] ::1 /thumb/index.php/Admin/Public/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-15T16:33:24+08:00 ] ::1 /thumb/index.php/Admin/Public/verify.html?time=0.04071179823949933
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2016-04-15T16:33:25+08:00 ] ::1 /thumb/index.php/Admin/Public/verify.html?time=0.04071179823949933?time=0.04163940018042922
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-15T16:33:26+08:00 ] ::1 /thumb/index.php/Admin/Public/verify.html?time=0.04071179823949933?time=0.04163940018042922?time=0.7682842307258397
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-15T16:33:32+08:00 ] ::1 /thumb/index.php/Admin/login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-04-15T16:33:32+08:00 ] ::1 /thumb/index.php/Admin/Public/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-15T16:33:33+08:00 ] ::1 /thumb/index.php/Admin/Public/verify.html?time=0.41498977574519813
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-04-15T16:37:55+08:00 ] ::1 /thumb/index.php/Admin/Login/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 非法操作:index
+
+[ 2016-04-15T16:38:29+08:00 ] ::1 /thumb/index.php/Admin/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.016600s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.016600s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-15T16:38:46+08:00 ] ::1 /thumb/index.php/Admin/Auth/index.html?_=1460709509144
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `th_auth_group_access` [ RunTime:0.0030s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM th_auth_group_access a INNER JOIN th_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0080s ]
+NOTIC: [8] Undefined index: id D:\wamp\www\thumb\Application\Common\Common\function.php 第 17 行.
+SQL: SHOW COLUMNS FROM `th_auth_rule` [ RunTime:0.0190s ]
+SQL: SELECT `condition`,`name` FROM `th_auth_rule` WHERE `id` IN ('') AND `type` = 1 AND `status` = 1  [ RunTime:0.0010s ]
+
+[ 2016-04-15T16:39:14+08:00 ] ::1 /thumb/index.php/Admin/Auth/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `th_auth_group_access` [ RunTime:0.0030s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM th_auth_group_access a INNER JOIN th_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: id D:\wamp\www\thumb\Application\Common\Common\function.php 第 17 行.
+SQL: SHOW COLUMNS FROM `th_auth_rule` [ RunTime:0.0030s ]
+SQL: SELECT `condition`,`name` FROM `th_auth_rule` WHERE `id` IN ('') AND `type` = 1 AND `status` = 1  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.052003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.053003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-04-15T16:39:55+08:00 ] ::1 /thumb/index.php/Admin/Auth/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-04-15T16:40:18+08:00 ] ::1 /thumb/index.php/Admin/Auth/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: list D:\wamp\www\thumb\Application\Runtime\Cache\Admin\7037a8d5a64fd30b57d5fa54024ea286.php 第 85 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-04-15T16:40:29+08:00 ] ::1 /thumb/index.php/Admin/Auth/index.html?_=1460709557697
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: list D:\wamp\www\thumb\Application\Runtime\Cache\Admin\7037a8d5a64fd30b57d5fa54024ea286.php 第 85 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-15T16:48:13+08:00 ] ::1 /thumb/index.php/Admin/Auth/index.html?_=1460709557698
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: data D:\wamp\www\thumb\Application\Runtime\Cache\Admin\7037a8d5a64fd30b57d5fa54024ea286.php 第 82 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-15T16:48:58+08:00 ] ::1 /thumb/index.php/Admin/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026601s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026601s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-15T16:49:00+08:00 ] ::1 /thumb/index.php/Admin/Auth/index.html?_=1460710138332
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: data D:\wamp\www\thumb\Application\Runtime\Cache\Admin\7037a8d5a64fd30b57d5fa54024ea286.php 第 82 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-04-15T16:50:09+08:00 ] ::1 /thumb/index.php/Admin/Auth/index.html?_=1460710138333
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: data D:\wamp\www\thumb\Application\Runtime\Cache\Admin\7037a8d5a64fd30b57d5fa54024ea286.php 第 82 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2016-04-15T16:50:10+08:00 ] ::1 /thumb/index.php/Admin/Auth/index.html?_=1460710138334
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: data D:\wamp\www\thumb\Application\Runtime\Cache\Admin\7037a8d5a64fd30b57d5fa54024ea286.php 第 82 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-04-15T16:50:59+08:00 ] ::1 /thumb/index.php/Admin/Auth/index.html?_=1460710138335
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: data D:\wamp\www\thumb\Application\Runtime\Cache\Admin\7037a8d5a64fd30b57d5fa54024ea286.php 第 82 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-15T16:51:06+08:00 ] ::1 /thumb/index.php/Admin/Auth/index.html?_=1460710138336
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: data D:\wamp\www\thumb\Application\Runtime\Cache\Admin\7037a8d5a64fd30b57d5fa54024ea286.php 第 82 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-04-15T16:51:07+08:00 ] ::1 /thumb/index.php/Admin/Auth/index.html?_=1460710138337
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: data D:\wamp\www\thumb\Application\Runtime\Cache\Admin\7037a8d5a64fd30b57d5fa54024ea286.php 第 82 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-15T16:51:10+08:00 ] ::1 /thumb/index.php/Admin/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-15T16:51:12+08:00 ] ::1 /thumb/index.php/Admin/Auth/accessList.html?_=1460710270656
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `th_modules` [ RunTime:0.0020s ]
+ERR: 1146:La table 'brodcts.tk_auth_rule' n'existe pas
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM tk_auth_rule rule  JOIN th_modules modules ON rule.mid=modules.id LIMIT 1  
+ERR: 1146:La table 'brodcts.tk_auth_rule' n'existe pas
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM tk_auth_rule rule  JOIN th_modules modules ON rule.mid=modules.id LIMIT 1  
+
+[ 2016-04-15T16:51:40+08:00 ] ::1 /thumb/index.php/Admin/Auth/accessList.html?_=1460710270657
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `th_modules` [ RunTime:0.0100s ]
+ERR: 1146:La table 'brodcts.tk_auth_rule' n'existe pas
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM tk_auth_rule rule  JOIN th_modules modules ON rule.mid=modules.id LIMIT 1  
+ERR: 1146:La table 'brodcts.tk_auth_rule' n'existe pas
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM tk_auth_rule rule  JOIN th_modules modules ON rule.mid=modules.id LIMIT 1  
+
+[ 2016-04-15T16:52:09+08:00 ] ::1 /thumb/index.php/Admin/Auth/accesslist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `th_modules` [ RunTime:0.0030s ]
+ERR: 1146:La table 'brodcts.tk_auth_rule' n'existe pas
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM tk_auth_rule rule  JOIN th_modules modules ON rule.mid=modules.id LIMIT 1  
+ERR: 1146:La table 'brodcts.tk_auth_rule' n'existe pas
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM tk_auth_rule rule  JOIN th_modules modules ON rule.mid=modules.id LIMIT 1  
+
+[ 2016-04-15T16:52:23+08:00 ] ::1 /thumb/index.php/Admin/Auth/accesslist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `th_modules` [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM th_auth_rule rule  JOIN th_modules modules ON rule.mid=modules.id LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT rule.id AS id,rule.name AS name,rule.title AS title,rule.type AS type,rule.condition AS term,rule.status AS status,rule.mid AS mid,modules.moduleName AS moduleName FROM th_auth_rule rule  JOIN th_modules modules ON rule.mid=modules.id ORDER BY rule.id desc LIMIT 0,5   [ RunTime:0.0010s ]
+
+[ 2016-04-15T16:52:35+08:00 ] ::1 /thumb/index.php/Admin/Auth/accesslist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `th_modules` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM th_auth_rule rule  JOIN th_modules modules ON rule.mid=modules.id LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT rule.id AS id,rule.name AS name,rule.title AS title,rule.type AS type,rule.condition AS term,rule.status AS status,rule.mid AS mid,modules.moduleName AS moduleName FROM th_auth_rule rule  JOIN th_modules modules ON rule.mid=modules.id ORDER BY rule.id desc LIMIT 0,5   [ RunTime:0.0000s ]
+
+[ 2016-04-15T16:52:42+08:00 ] ::1 /thumb/index.php/Admin/Auth/accesslist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `th_modules` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM th_auth_rule rule  JOIN th_modules modules ON rule.mid=modules.id LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT rule.id AS id,rule.name AS name,rule.title AS title,rule.type AS type,rule.condition AS term,rule.status AS status,rule.mid AS mid,modules.moduleName AS moduleName FROM th_auth_rule rule  JOIN th_modules modules ON rule.mid=modules.id ORDER BY rule.id desc LIMIT 0,5   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\7037a8d5a64fd30b57d5fa54024ea286.php 第 87 行.
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\7037a8d5a64fd30b57d5fa54024ea286.php 第 87 行.
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\7037a8d5a64fd30b57d5fa54024ea286.php 第 87 行.
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\7037a8d5a64fd30b57d5fa54024ea286.php 第 87 行.
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\7037a8d5a64fd30b57d5fa54024ea286.php 第 87 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-15T16:52:45+08:00 ] ::1 /thumb/index.php/Admin/Auth/accessList.html?_=1460710270658
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `th_modules` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM th_auth_rule rule  JOIN th_modules modules ON rule.mid=modules.id LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT rule.id AS id,rule.name AS name,rule.title AS title,rule.type AS type,rule.condition AS term,rule.status AS status,rule.mid AS mid,modules.moduleName AS moduleName FROM th_auth_rule rule  JOIN th_modules modules ON rule.mid=modules.id ORDER BY rule.id desc LIMIT 0,5   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\7037a8d5a64fd30b57d5fa54024ea286.php 第 87 行.
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\7037a8d5a64fd30b57d5fa54024ea286.php 第 87 行.
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\7037a8d5a64fd30b57d5fa54024ea286.php 第 87 行.
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\7037a8d5a64fd30b57d5fa54024ea286.php 第 87 行.
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\7037a8d5a64fd30b57d5fa54024ea286.php 第 87 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-15T16:53:24+08:00 ] ::1 /thumb/index.php/Admin/Auth/accessList.html?_=1460710270659
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `th_modules` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM th_auth_rule rule  JOIN th_modules modules ON rule.mid=modules.id LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT rule.id AS id,rule.name AS name,rule.title AS title,rule.type AS type,rule.condition AS term,rule.status AS status,rule.mid AS mid,modules.moduleName AS moduleName FROM th_auth_rule rule  JOIN th_modules modules ON rule.mid=modules.id ORDER BY rule.id desc LIMIT 0,5   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\161650e4ca5a037e3871d527d5f5d5e3.php 第 87 行.
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\161650e4ca5a037e3871d527d5f5d5e3.php 第 87 行.
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\161650e4ca5a037e3871d527d5f5d5e3.php 第 87 行.
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\161650e4ca5a037e3871d527d5f5d5e3.php 第 87 行.
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\161650e4ca5a037e3871d527d5f5d5e3.php 第 87 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-15T16:53:45+08:00 ] ::1 /thumb/index.php/Admin/Auth/accessList.html?_=1460710270660
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `th_modules` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM th_auth_rule rule  JOIN th_modules modules ON rule.mid=modules.id LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT rule.id AS id,rule.name AS name,rule.title AS title,rule.type AS type,rule.condition AS term,rule.status AS status,rule.mid AS mid,modules.moduleName AS moduleName FROM th_auth_rule rule  JOIN th_modules modules ON rule.mid=modules.id ORDER BY rule.id desc LIMIT 0,5   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\161650e4ca5a037e3871d527d5f5d5e3.php 第 87 行.
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\161650e4ca5a037e3871d527d5f5d5e3.php 第 87 行.
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\161650e4ca5a037e3871d527d5f5d5e3.php 第 87 行.
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\161650e4ca5a037e3871d527d5f5d5e3.php 第 87 行.
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\161650e4ca5a037e3871d527d5f5d5e3.php 第 87 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-15T16:53:56+08:00 ] ::1 /thumb/index.php/Admin/Auth/accessList.html?_=1460710270661
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `th_modules` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM th_auth_rule rule  JOIN th_modules modules ON rule.mid=modules.id LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT rule.id AS id,rule.name AS name,rule.title AS title,rule.type AS type,rule.condition AS term,rule.status AS status,rule.mid AS mid,modules.moduleName AS moduleName FROM th_auth_rule rule  JOIN th_modules modules ON rule.mid=modules.id ORDER BY rule.id desc LIMIT 0,5   [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\161650e4ca5a037e3871d527d5f5d5e3.php 第 87 行.
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\161650e4ca5a037e3871d527d5f5d5e3.php 第 87 行.
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\161650e4ca5a037e3871d527d5f5d5e3.php 第 87 行.
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\161650e4ca5a037e3871d527d5f5d5e3.php 第 87 行.
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\161650e4ca5a037e3871d527d5f5d5e3.php 第 87 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-04-15T17:03:43+08:00 ] ::1 /thumb/index.php/Admin/login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-15T17:03:43+08:00 ] ::1 /thumb/index.php/Admin/Public/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-04-15T17:04:20+08:00 ] ::1 /thumb/index.php/Admin/login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-15T17:04:21+08:00 ] ::1 /thumb/index.php/Admin/Public/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-15T17:05:00+08:00 ] ::1 /thumb/index.php/Admin/Login/checkLogin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-15T17:05:03+08:00 ] ::1 /thumb/index.php/Admin/Login/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 非法操作:index
+
+[ 2016-04-15T17:06:34+08:00 ] ::1 /thumb/index.php/Admin/Login/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 非法操作:index
+
+[ 2016-04-15T17:06:59+08:00 ] ::1 /thumb/index.php/Admin/Login/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 非法操作:index
+
+[ 2016-04-15T17:07:04+08:00 ] ::1 /thumb/index.php/Admin/Login/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 非法操作:index
+
+[ 2016-04-15T17:07:08+08:00 ] ::1 /thumb/index.php/Admin/Login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-04-15T17:07:08+08:00 ] ::1 /thumb/index.php/Admin/Public/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-15T17:07:13+08:00 ] ::1 /thumb/index.php/Admin/Public/verify.html?time=0.1354944093618542
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-04-15T17:07:17+08:00 ] ::1 /thumb/index.php/Admin/Login/checkLogin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:La table 'brodcts.th_members' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `th_members`
+ERR: 1146:La table 'brodcts.th_members' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `th_members`
+
+[ 2016-04-15T17:07:54+08:00 ] ::1 /thumb/index.php/Admin/Login/checkLogin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-04-15T17:07:57+08:00 ] ::1 /thumb/index.php/Admin/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-15T17:07:57+08:00 ] ::1 /thumb/index.php/Admin/Public/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-04-15T17:08:04+08:00 ] ::1 /thumb/index.php/Admin/Login/checkLogin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `th_user` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `th_user` WHERE `mobile` = '15300000000' AND `password` = '21232f297a57a5a743894a0e4a801fc3' LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: username D:\wamp\www\thumb\Application\Admin\Controller\LoginController.class.php 第 23 行.
+NOTIC: [8] Undefined index: uid D:\wamp\www\thumb\Application\Admin\Controller\LoginController.class.php 第 24 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-04-15T17:08:05+08:00 ] ::1 /thumb/index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-15T17:10:53+08:00 ] ::1 /thumb/index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021601s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021601s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-15T17:10:55+08:00 ] ::1 /thumb/index.php/Admin/Login/logout.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-15T17:10:56+08:00 ] ::1 /thumb/index.php/Admin/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-04-15T17:10:56+08:00 ] ::1 /thumb/index.php/Admin/Public/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-15T17:10:59+08:00 ] ::1 /thumb/index.php/Admin/Login/checkLogin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-15T17:11:02+08:00 ] ::1 /thumb/index.php/Admin/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-04-15T17:11:02+08:00 ] ::1 /thumb/index.php/Admin/Public/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-15T17:11:12+08:00 ] ::1 /thumb/index.php/Admin/Login/checkLogin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015600s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `th_user` [ RunTime:0.0430s ]
+SQL: SELECT * FROM `th_user` WHERE `mobile` = '15300000000' AND `password` = '21232f297a57a5a743894a0e4a801fc3' LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: username D:\wamp\www\thumb\Application\Admin\Controller\LoginController.class.php 第 23 行.
+NOTIC: [8] Undefined index: uid D:\wamp\www\thumb\Application\Admin\Controller\LoginController.class.php 第 24 行.
+
+[ 2016-04-15T17:11:12+08:00 ] ::1 /thumb/index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-15T17:11:33+08:00 ] ::1 /thumb/index.php/Admin/Index/sidebar_2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 非法操作:sidebar_2
+
+[ 2016-04-15T17:11:34+08:00 ] ::1 /thumb/index.php/Admin/Index/sidebar_2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+ERR: 非法操作:sidebar_2
+
+[ 2016-04-15T17:12:05+08:00 ] ::1 /thumb/index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-15T17:12:15+08:00 ] ::1 /thumb/index.php/Admin/Auth/accessList.html?_=1460711525689
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `th_modules` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM th_auth_rule rule  JOIN th_modules modules ON rule.mid=modules.id LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT rule.id AS id,rule.name AS name,rule.title AS title,rule.type AS type,rule.condition AS term,rule.status AS status,rule.mid AS mid,modules.moduleName AS moduleName FROM th_auth_rule rule  JOIN th_modules modules ON rule.mid=modules.id ORDER BY rule.id desc LIMIT 0,5   [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\161650e4ca5a037e3871d527d5f5d5e3.php 第 87 行.
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\161650e4ca5a037e3871d527d5f5d5e3.php 第 87 行.
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\161650e4ca5a037e3871d527d5f5d5e3.php 第 87 行.
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\161650e4ca5a037e3871d527d5f5d5e3.php 第 87 行.
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\161650e4ca5a037e3871d527d5f5d5e3.php 第 87 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-04-15T17:12:29+08:00 ] ::1 /thumb/index.php/Admin/Index/index.html?_=1460711525690
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2016-04-15T17:12:35+08:00 ] ::1 /thumb/index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-15T17:12:37+08:00 ] ::1 /thumb/index.php/Admin/Auth/accessList.html?_=1460711555527
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `th_modules` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM th_auth_rule rule  JOIN th_modules modules ON rule.mid=modules.id LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT rule.id AS id,rule.name AS name,rule.title AS title,rule.type AS type,rule.condition AS term,rule.status AS status,rule.mid AS mid,modules.moduleName AS moduleName FROM th_auth_rule rule  JOIN th_modules modules ON rule.mid=modules.id ORDER BY rule.id desc LIMIT 0,5   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\161650e4ca5a037e3871d527d5f5d5e3.php 第 87 行.
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\161650e4ca5a037e3871d527d5f5d5e3.php 第 87 行.
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\161650e4ca5a037e3871d527d5f5d5e3.php 第 87 行.
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\161650e4ca5a037e3871d527d5f5d5e3.php 第 87 行.
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\161650e4ca5a037e3871d527d5f5d5e3.php 第 87 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-15T17:14:17+08:00 ] ::1 /thumb/index.php/Admin/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-15T17:14:18+08:00 ] ::1 /thumb/index.php/Admin/Auth/accessList.html?_=1460711657693
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `th_modules` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM th_auth_rule rule  JOIN th_modules modules ON rule.mid=modules.id LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT rule.id AS id,rule.name AS name,rule.title AS title,rule.type AS type,rule.condition AS term,rule.status AS status,rule.mid AS mid,modules.moduleName AS moduleName FROM th_auth_rule rule  JOIN th_modules modules ON rule.mid=modules.id ORDER BY rule.id desc LIMIT 0,5   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\161650e4ca5a037e3871d527d5f5d5e3.php 第 87 行.
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\161650e4ca5a037e3871d527d5f5d5e3.php 第 87 行.
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\161650e4ca5a037e3871d527d5f5d5e3.php 第 87 行.
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\161650e4ca5a037e3871d527d5f5d5e3.php 第 87 行.
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\161650e4ca5a037e3871d527d5f5d5e3.php 第 87 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-04-15T17:14:54+08:00 ] ::1 /thumb/index.php/Admin/Auth/accessList.html?_=1460711657694
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `th_modules` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM th_auth_rule rule  JOIN th_modules modules ON rule.mid=modules.id LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT rule.id AS id,rule.name AS name,rule.title AS title,rule.type AS type,rule.condition AS term,rule.status AS status,rule.mid AS mid,modules.moduleName AS moduleName FROM th_auth_rule rule  JOIN th_modules modules ON rule.mid=modules.id ORDER BY rule.id desc LIMIT 0,20   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\161650e4ca5a037e3871d527d5f5d5e3.php 第 87 行.
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\161650e4ca5a037e3871d527d5f5d5e3.php 第 87 行.
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\161650e4ca5a037e3871d527d5f5d5e3.php 第 87 行.
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\161650e4ca5a037e3871d527d5f5d5e3.php 第 87 行.
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\161650e4ca5a037e3871d527d5f5d5e3.php 第 87 行.
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\161650e4ca5a037e3871d527d5f5d5e3.php 第 87 行.
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\161650e4ca5a037e3871d527d5f5d5e3.php 第 87 行.
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\161650e4ca5a037e3871d527d5f5d5e3.php 第 87 行.
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\161650e4ca5a037e3871d527d5f5d5e3.php 第 87 行.
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\161650e4ca5a037e3871d527d5f5d5e3.php 第 87 行.
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\161650e4ca5a037e3871d527d5f5d5e3.php 第 87 行.
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\161650e4ca5a037e3871d527d5f5d5e3.php 第 87 行.
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\161650e4ca5a037e3871d527d5f5d5e3.php 第 87 行.
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\161650e4ca5a037e3871d527d5f5d5e3.php 第 87 行.
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\161650e4ca5a037e3871d527d5f5d5e3.php 第 87 行.
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\161650e4ca5a037e3871d527d5f5d5e3.php 第 87 行.
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\161650e4ca5a037e3871d527d5f5d5e3.php 第 87 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-04-15T17:21:16+08:00 ] ::1 /thumb/index.php/Admin/index/demo_page4.html?_=1460711657695
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 非法操作:demo_page4
+
+[ 2016-04-15T17:22:19+08:00 ] ::1 /thumb/index.php/Admin/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-15T17:22:21+08:00 ] ::1 /thumb/index.php/Admin/Auth/accessList.html?_=1460712140033
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `th_modules` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM th_auth_rule rule  JOIN th_modules modules ON rule.mid=modules.id LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT rule.id AS id,rule.name AS name,rule.title AS title,rule.type AS type,rule.condition AS term,rule.status AS status,rule.mid AS mid,modules.moduleName AS moduleName FROM th_auth_rule rule  JOIN th_modules modules ON rule.mid=modules.id ORDER BY rule.id desc LIMIT 0,20   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\161650e4ca5a037e3871d527d5f5d5e3.php 第 87 行.
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\161650e4ca5a037e3871d527d5f5d5e3.php 第 87 行.
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\161650e4ca5a037e3871d527d5f5d5e3.php 第 87 行.
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\161650e4ca5a037e3871d527d5f5d5e3.php 第 87 行.
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\161650e4ca5a037e3871d527d5f5d5e3.php 第 87 行.
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\161650e4ca5a037e3871d527d5f5d5e3.php 第 87 行.
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\161650e4ca5a037e3871d527d5f5d5e3.php 第 87 行.
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\161650e4ca5a037e3871d527d5f5d5e3.php 第 87 行.
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\161650e4ca5a037e3871d527d5f5d5e3.php 第 87 行.
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\161650e4ca5a037e3871d527d5f5d5e3.php 第 87 行.
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\161650e4ca5a037e3871d527d5f5d5e3.php 第 87 行.
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\161650e4ca5a037e3871d527d5f5d5e3.php 第 87 行.
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\161650e4ca5a037e3871d527d5f5d5e3.php 第 87 行.
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\161650e4ca5a037e3871d527d5f5d5e3.php 第 87 行.
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\161650e4ca5a037e3871d527d5f5d5e3.php 第 87 行.
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\161650e4ca5a037e3871d527d5f5d5e3.php 第 87 行.
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\161650e4ca5a037e3871d527d5f5d5e3.php 第 87 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-04-15T17:22:30+08:00 ] ::1 /thumb/index.php/Admin/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2016-04-15T17:22:31+08:00 ] ::1 /thumb/index.php/Admin/Auth/accessList.html?_=1460712150331
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `th_modules` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM th_auth_rule rule  JOIN th_modules modules ON rule.mid=modules.id LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT rule.id AS id,rule.name AS name,rule.title AS title,rule.type AS type,rule.condition AS term,rule.status AS status,rule.mid AS mid,modules.moduleName AS moduleName FROM th_auth_rule rule  JOIN th_modules modules ON rule.mid=modules.id ORDER BY rule.id desc LIMIT 0,20   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\161650e4ca5a037e3871d527d5f5d5e3.php 第 87 行.
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\161650e4ca5a037e3871d527d5f5d5e3.php 第 87 行.
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\161650e4ca5a037e3871d527d5f5d5e3.php 第 87 行.
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\161650e4ca5a037e3871d527d5f5d5e3.php 第 87 行.
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\161650e4ca5a037e3871d527d5f5d5e3.php 第 87 行.
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\161650e4ca5a037e3871d527d5f5d5e3.php 第 87 行.
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\161650e4ca5a037e3871d527d5f5d5e3.php 第 87 行.
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\161650e4ca5a037e3871d527d5f5d5e3.php 第 87 行.
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\161650e4ca5a037e3871d527d5f5d5e3.php 第 87 行.
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\161650e4ca5a037e3871d527d5f5d5e3.php 第 87 行.
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\161650e4ca5a037e3871d527d5f5d5e3.php 第 87 行.
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\161650e4ca5a037e3871d527d5f5d5e3.php 第 87 行.
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\161650e4ca5a037e3871d527d5f5d5e3.php 第 87 行.
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\161650e4ca5a037e3871d527d5f5d5e3.php 第 87 行.
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\161650e4ca5a037e3871d527d5f5d5e3.php 第 87 行.
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\161650e4ca5a037e3871d527d5f5d5e3.php 第 87 行.
+NOTIC: [8] Undefined index: moduleName D:\wamp\www\thumb\Application\Runtime\Cache\Admin\161650e4ca5a037e3871d527d5f5d5e3.php 第 87 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-04-15T17:22:32+08:00 ] ::1 /thumb/index.php/Admin/index/index?_=1460712150332
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+

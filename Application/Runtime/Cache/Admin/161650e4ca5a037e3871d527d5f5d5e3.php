@@ -1,4 +1,4 @@
-<form id="pagerForm" method="post" action="demo_page1.html">
+<?php if (!defined('THINK_PATH')) exit();?><form id="pagerForm" method="post" action="demo_page1.html">
 	<input type="hidden" name="status" value="${param.status}">
 	<input type="hidden" name="keywords" value="${param.keywords}" />
 	<input type="hidden" name="pageNum" value="1" />
@@ -59,7 +59,7 @@
 <div class="pageContent">
 	<div class="panelBar">
 		<ul class="toolBar">
-			<li><a class="add" href="demo_page4.html" target="navTab"><span>添加</span></a></li>
+			<li><a class="add" href="<?php echo ('');?>" target="dialog" rel="dlg_page12" mask="true"><span>添加</span></a></li>
 			<li><a class="delete" href="demo/common/ajaxDone.html?uid={sid_user}" target="ajaxTodo" title="确定要删除吗?"><span>删除</span></a></li>
 			<li><a class="edit" href="demo_page4.html?uid={sid_user}" target="navTab"><span>修改</span></a></li>
 			<li class="line">line</li>
@@ -69,33 +69,36 @@
 	<table class="table" width="100%" layoutH="138">
 		<thead>
 			<tr>
-				<th width="40" align="center">#</th>
-				<th width="120">账号</th>
-				<th>客户名称</th>
-				<th width="150">邮箱</th>
-				<th width="150">手机号</th>
-				<th width="80" align="center">登陆次数</th>
-				<th width="100">最后登陆时间</th>
-				<th width="100">最后登陆IP</th>
-				<th width="80">建档日期</th>
-				<th width="80" align="center">操作</th>
+				<th width="40" align="center">序号</th>
+				<th width="250">规则标识</th>
+				<th>规则简述</th>
+				<th width="250">附加条件</th>
+				<th width="150">所属模块</th>
+				<th width="80" align="center">状态</th>
+				<th width="100">操作</th>
 			</tr>
 		</thead>
 		<tbody>
-			<volist name="list" id="vo" key="k">
-				<tr target="sid_user" rel="1">
-					<td>{$k}</td>
-					<td>{$vo.account}</td>
-					<td>{$vo.nickname}</td>
-					<td>{$vo.email}</td>
-					<td>{$vo.mobile}</td>
-					<td>{$vo.login_count}</td>
-					<td>{$vo.last_login_time}</td>
-					<td>{$vo.last_login_ip}</td>
-					<td>2009-05-21</td>
-					<td><a href="javascript:;">删除</a></td>
-				</tr>
-			</volist>
+			<?php if(is_array($data)): $k = 0; $__LIST__ = $data;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($k % 2 );++$k;?><tr>
+				<td><?php echo ($k); ?></td>
+				<td><?php echo ($vo['name']); ?></td>
+				<td><?php echo ($vo['title']); ?></td>
+				<td><?php echo ($vo['term']); ?></td>
+				<td><?php echo ($vo['moduleName']); ?></td>
+				<td>
+					<?php if($vo['status'] == 1): ?><span class="label label-success"><i class="glyphicon glyphicon-ok"></i></span>
+					<?php else: ?>
+						<span class="label label-danger">							
+						<i class="glyphicon glyphicon-remove"></i></span><?php endif; ?>
+				</td>
+				<td>
+					<div class="btn-group btn-group-xs">
+						<a href="#" class="btn btn-warning">修改</a>
+						<a href="<?php echo U('Admin/Auth/accessDelHandle',array('id'=>$vo['id']));?>" class="btn btn-danger">删除</a>
+					</div>
+
+				</td>
+			</tr><?php endforeach; endif; else: echo "" ;endif; ?>
 		</tbody>
 	</table>
 	<div class="panelBar">
