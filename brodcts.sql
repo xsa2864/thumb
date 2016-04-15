@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50617
 File Encoding         : 65001
 
-Date: 2016-03-24 10:54:48
+Date: 2016-04-15 16:13:59
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -22,10 +22,10 @@ DROP TABLE IF EXISTS `th_address`;
 CREATE TABLE `th_address` (
   `address_id` int(8) NOT NULL AUTO_INCREMENT,
   `user_id` int(8) NOT NULL DEFAULT '0' COMMENT '用户id',
-  `Province` varchar(10) NOT NULL COMMENT '省',
-  `City` varchar(10) NOT NULL COMMENT '市',
-  `District` varchar(10) NOT NULL COMMENT '区',
-  `ConsigneeAddr` varchar(80) NOT NULL COMMENT '详细地址',
+  `province` varchar(10) NOT NULL COMMENT '省',
+  `city` varchar(10) NOT NULL COMMENT '市',
+  `district` varchar(10) NOT NULL COMMENT '区',
+  `consigneeaddr` varchar(80) NOT NULL COMMENT '详细地址',
   `code` int(6) NOT NULL DEFAULT '0' COMMENT '邮编',
   `default` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`address_id`)
@@ -34,6 +34,91 @@ CREATE TABLE `th_address` (
 -- ----------------------------
 -- Records of th_address
 -- ----------------------------
+
+-- ----------------------------
+-- Table structure for th_auth_group
+-- ----------------------------
+DROP TABLE IF EXISTS `th_auth_group`;
+CREATE TABLE `th_auth_group` (
+  `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,
+  `title` char(100) NOT NULL DEFAULT '',
+  `status` tinyint(1) NOT NULL DEFAULT '1',
+  `rules` char(80) NOT NULL DEFAULT '',
+  `describe` char(50) NOT NULL DEFAULT '',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of th_auth_group
+-- ----------------------------
+INSERT INTO `th_auth_group` VALUES ('1', '超级管理员', '1', '', '拥有全部权限');
+INSERT INTO `th_auth_group` VALUES ('2', '网站管理员', '1', '11,12,13,14,2,1,7,9,15,16,17', '拥有相对多的权限');
+INSERT INTO `th_auth_group` VALUES ('3', '发布人员', '1', '2,15,16,17', '拥有发布、修改文章的权限');
+INSERT INTO `th_auth_group` VALUES ('4', '编辑', '1', '11,12,13,14,2', '拥有文章模块的所有权限');
+INSERT INTO `th_auth_group` VALUES ('5', '积分小于50', '1', '2,15', '积分小于50');
+INSERT INTO `th_auth_group` VALUES ('6', '积分大于50小于200', '1', '2,16', '积分大于50小于200');
+INSERT INTO `th_auth_group` VALUES ('7', '积分大于200', '1', '2,17', '积分大于200');
+INSERT INTO `th_auth_group` VALUES ('8', '默认组', '1', '2,1,3', '拥有一些通用的权限');
+
+-- ----------------------------
+-- Table structure for th_auth_group_access
+-- ----------------------------
+DROP TABLE IF EXISTS `th_auth_group_access`;
+CREATE TABLE `th_auth_group_access` (
+  `uid` mediumint(8) unsigned NOT NULL,
+  `group_id` mediumint(8) unsigned NOT NULL,
+  UNIQUE KEY `uid_group_id` (`uid`,`group_id`),
+  KEY `uid` (`uid`),
+  KEY `group_id` (`group_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of th_auth_group_access
+-- ----------------------------
+INSERT INTO `th_auth_group_access` VALUES ('1', '1');
+INSERT INTO `th_auth_group_access` VALUES ('2', '2');
+INSERT INTO `th_auth_group_access` VALUES ('3', '3');
+INSERT INTO `th_auth_group_access` VALUES ('4', '4');
+INSERT INTO `th_auth_group_access` VALUES ('5', '5');
+INSERT INTO `th_auth_group_access` VALUES ('6', '6');
+INSERT INTO `th_auth_group_access` VALUES ('7', '7');
+
+-- ----------------------------
+-- Table structure for th_auth_rule
+-- ----------------------------
+DROP TABLE IF EXISTS `th_auth_rule`;
+CREATE TABLE `th_auth_rule` (
+  `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,
+  `name` char(80) NOT NULL DEFAULT '',
+  `title` char(20) NOT NULL DEFAULT '',
+  `type` tinyint(1) NOT NULL DEFAULT '1',
+  `status` tinyint(1) NOT NULL DEFAULT '1',
+  `condition` char(100) NOT NULL DEFAULT '',
+  `mid` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `name` (`name`)
+) ENGINE=MyISAM AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of th_auth_rule
+-- ----------------------------
+INSERT INTO `th_auth_rule` VALUES ('1', 'Admin/Auth/accessList', '权限列表', '1', '1', '', '3');
+INSERT INTO `th_auth_rule` VALUES ('2', 'Admin/Index/index', '后台首页', '1', '1', '', '2');
+INSERT INTO `th_auth_rule` VALUES ('3', 'Admin/Auth/accessAdd', '添加权限页面', '1', '1', '', '3');
+INSERT INTO `th_auth_rule` VALUES ('4', 'Admin/Auth/groupList', '角色管理页面', '1', '1', '', '3');
+INSERT INTO `th_auth_rule` VALUES ('5', 'Admin/Auth/addHandle', '添加权限', '1', '1', '', '3');
+INSERT INTO `th_auth_rule` VALUES ('6', 'Admin/Auth/groupAddHandle', '添加角色', '1', '1', '', '3');
+INSERT INTO `th_auth_rule` VALUES ('7', 'Admin/Auth/accessSelect', '角色授权页面', '1', '1', '', '3');
+INSERT INTO `th_auth_rule` VALUES ('8', 'Admin/Auth/accessSelectHandle', '更新角色权限', '1', '1', '', '3');
+INSERT INTO `th_auth_rule` VALUES ('9', 'Admin/Auth/groupMember', '角色组成员列表', '1', '1', '', '3');
+INSERT INTO `th_auth_rule` VALUES ('10', 'Admin/Auth/accessDelHandle', '删除权限', '1', '1', '', '3');
+INSERT INTO `th_auth_rule` VALUES ('11', 'Admin/Member/memberList', '会员列表', '1', '1', '', '1');
+INSERT INTO `th_auth_rule` VALUES ('12', 'Admin/Member/memberAdd', '添加会员页面', '1', '1', '', '1');
+INSERT INTO `th_auth_rule` VALUES ('13', 'Admin/Member/addHandle', '添加会员', '1', '1', '', '1');
+INSERT INTO `th_auth_rule` VALUES ('14', 'Admin/Member/deleteHandle', '删除会员', '1', '1', '', '1');
+INSERT INTO `th_auth_rule` VALUES ('15', 'score50', '积分小于50', '1', '1', '{score}<50', '4');
+INSERT INTO `th_auth_rule` VALUES ('16', 'score100', '积分大于50小于200', '1', '1', '{score}>50 and {score}<200', '4');
+INSERT INTO `th_auth_rule` VALUES ('17', 'score200', '积分大于200', '1', '1', '{score}>200', '4');
 
 -- ----------------------------
 -- Table structure for th_category
@@ -62,6 +147,43 @@ INSERT INTO `th_category` VALUES ('13', '1', '0', '44', '数组转换成xml');
 INSERT INTO `th_category` VALUES ('15', '0', '2', '0', '电压力锅');
 
 -- ----------------------------
+-- Table structure for th_daily_task
+-- ----------------------------
+DROP TABLE IF EXISTS `th_daily_task`;
+CREATE TABLE `th_daily_task` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '工作日志表ID',
+  `user_id` smallint(5) DEFAULT NULL COMMENT '用户ID',
+  `content` text COMMENT '日志内容',
+  `task_date` date DEFAULT NULL COMMENT '日期',
+  `day_num` int(2) DEFAULT NULL COMMENT '每周第n天1-7周一到周日',
+  `create_time` int(10) unsigned DEFAULT NULL,
+  `update_time` int(10) unsigned DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=22 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of th_daily_task
+-- ----------------------------
+INSERT INTO `th_daily_task` VALUES ('3', '3', 'DWZ组件前端JS编码\r\n...', '2014-03-07', '5', '1394165878', '1395973374');
+INSERT INTO `th_daily_task` VALUES ('4', '2', '1）Hibernate + Spring + Struts2 + jUI整合应用\r\n2）Mybatis + SpringMVC + Sitemesh + jUI整合应用', '2014-03-06', '4', '1394165905', '1395973145');
+INSERT INTO `th_daily_task` VALUES ('6', '4', '休假', '2014-03-07', '5', '1394184221', '1394256528');
+INSERT INTO `th_daily_task` VALUES ('7', '4', '1）DWZ界面设计\r\n2）视觉设计\r\n3）DWZ组件HTML结构定义', '2014-03-03', '1', '1394256340', '1395973276');
+INSERT INTO `th_daily_task` VALUES ('8', '4', 'DWZ组件设计\r\n...', '2014-03-04', '2', '1394256383', '1395973248');
+INSERT INTO `th_daily_task` VALUES ('9', '4', '1）DWZ组件结构定义\r\n2）DWZ组件操作行为定义\r\n...', '2014-03-05', '3', '1394256459', '1395973329');
+INSERT INTO `th_daily_task` VALUES ('10', '4', '1）DWZ组件HTML结构\r\n2）DWZ组件CSS\r\n...', '2014-03-06', '4', '1394256502', '1395973343');
+INSERT INTO `th_daily_task` VALUES ('11', '3', '1）DWZ组件前端JS编码\r\n2）grid组件\r\n3）tree组件\r\n4）dialog组件\r\n5）DWZ 拖动事件\r\n6）combox组件', '2014-03-03', '1', '1394256575', '1395973286');
+INSERT INTO `th_daily_task` VALUES ('12', '3', 'DWZ组件前端JS编码\r\n...', '2014-03-04', '2', '1394256587', '1395973311');
+INSERT INTO `th_daily_task` VALUES ('13', '3', 'DWZ组件前端JS编码\r\n...', '2014-03-05', '3', '1394256594', '1395973357');
+INSERT INTO `th_daily_task` VALUES ('14', '3', 'DWZ组件前端JS编码\r\n...', '2014-03-06', '4', '1394256610', '1395973365');
+INSERT INTO `th_daily_task` VALUES ('15', '2', '1）DWZ组件前端JS编码\r\n2）dwz.core.js\r\n3）Ajax表单提交、交互相关\r\n4）Ajax分页组件、局部刷新\r\n5）DWZ日历控件\r\n6）navTab组件\r\n7）alertMsg组件\r\n8）contextmenu右键菜单', '2014-03-03', '1', '1394256642', '1395973298');
+INSERT INTO `th_daily_task` VALUES ('16', '2', 'DWZ组件前端JS编码\r\n...', '2014-03-04', '2', '1394256665', '1395973404');
+INSERT INTO `th_daily_task` VALUES ('17', '2', 'DWZ组件前端JS编码\r\n...', '2014-03-05', '3', '1394256671', '1395973388');
+INSERT INTO `th_daily_task` VALUES ('18', '2', '1）ThinkPHP + jUI整合应用\r\n2）Zend Framework + jUI整合应用', '2014-03-07', '5', '1394256819', '1395973170');
+INSERT INTO `th_daily_task` VALUES ('19', '2', 'PHP开发DWZ工作日志系统', '2014-03-08', '6', '1394256889', '1395138872');
+INSERT INTO `th_daily_task` VALUES ('20', '2', '1）research C++ TinyXML parse an XML form string\r\n2）调整iQ-Energy App离线计算接口，把参数传递xmlPath改成xmlContent\r\n3）协助iQ-Energy App离线计算C++接口定义\r\n4）起草技术培训计划\r\n5）起草计算引擎技术支持计划', '2014-05-31', '6', '1401509890', '1401509897');
+INSERT INTO `th_daily_task` VALUES ('21', '2', '#DWZ工作日志系统手机版\n1）服务端\n2）客户端', '2014-08-31', '7', '1409454130', '1409525926');
+
+-- ----------------------------
 -- Table structure for th_distributor
 -- ----------------------------
 DROP TABLE IF EXISTS `th_distributor`;
@@ -82,17 +204,17 @@ CREATE TABLE `th_distributor` (
 -- ----------------------------
 DROP TABLE IF EXISTS `th_goods`;
 CREATE TABLE `th_goods` (
-  `goods_id` int(8) NOT NULL AUTO_INCREMENT,
+  `goods_id` int(10) NOT NULL AUTO_INCREMENT COMMENT '商品id',
   `cat_id` int(8) NOT NULL DEFAULT '0' COMMENT '分类id',
-  `productId` varchar(20) NOT NULL DEFAULT '0' COMMENT '商品编号或海关号',
+  `goods_no` varchar(20) NOT NULL DEFAULT '0' COMMENT '商品货号',
   `brand` varchar(10) NOT NULL COMMENT '品名',
-  `goodsFrom` varchar(10) NOT NULL COMMENT '商品来源',
-  `goodsName` varchar(20) NOT NULL COMMENT '商品名称',
+  `goodsfrom` varchar(10) NOT NULL COMMENT '商品来源',
+  `goodsname` varchar(20) NOT NULL COMMENT '商品名称',
   `text` text COMMENT '富文本信息',
   `qty` int(4) NOT NULL DEFAULT '0' COMMENT '购买数量',
   `unit` varchar(3) NOT NULL COMMENT '单位（如件、只、箱等）',
   `price` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '购买价格',
-  `addTime` int(10) NOT NULL DEFAULT '0' COMMENT '添加时间',
+  `addtime` int(10) NOT NULL DEFAULT '0' COMMENT '添加时间',
   PRIMARY KEY (`goods_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COMMENT='商品表';
 
@@ -124,18 +246,36 @@ CREATE TABLE `th_goods_photos` (
 INSERT INTO `th_goods_photos` VALUES ('1', '1', 'http://image2.suning.cn/b2c/catentries/000000000140361185_1_400x400.jpg', null, null);
 
 -- ----------------------------
+-- Table structure for th_modules
+-- ----------------------------
+DROP TABLE IF EXISTS `th_modules`;
+CREATE TABLE `th_modules` (
+  `id` tinyint(3) unsigned NOT NULL AUTO_INCREMENT,
+  `moduleName` varchar(20) NOT NULL DEFAULT '',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of th_modules
+-- ----------------------------
+INSERT INTO `th_modules` VALUES ('1', '会员管理');
+INSERT INTO `th_modules` VALUES ('2', '后台管理');
+INSERT INTO `th_modules` VALUES ('3', '权限管理');
+INSERT INTO `th_modules` VALUES ('4', '其他');
+
+-- ----------------------------
 -- Table structure for th_money_log
 -- ----------------------------
 DROP TABLE IF EXISTS `th_money_log`;
 CREATE TABLE `th_money_log` (
   `mon_id` int(8) NOT NULL AUTO_INCREMENT,
   `user_id` int(8) NOT NULL DEFAULT '0' COMMENT '用户id',
-  `orderId` varchar(20) DEFAULT '0' COMMENT '订单号',
+  `orderid` varchar(20) DEFAULT '0' COMMENT '订单号',
   `money` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '资金',
   `content` varchar(50) NOT NULL COMMENT '备注',
   `condition` varchar(4) NOT NULL COMMENT '收支情况 收入还是支出',
   `status` varchar(8) NOT NULL COMMENT '交易状态',
-  `addTime` int(10) NOT NULL COMMENT '添加时间',
+  `addtime` int(10) NOT NULL COMMENT '添加时间',
   PRIMARY KEY (`mon_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COMMENT='资金明细';
 
@@ -145,6 +285,56 @@ CREATE TABLE `th_money_log` (
 INSERT INTO `th_money_log` VALUES ('1', '0', '0', '1000.00', '充值', '收入', '交易成功', '1458699326');
 INSERT INTO `th_money_log` VALUES ('2', '0', '20160313', '1000.00', '充值', '收入', '交易成功', '1458699326');
 INSERT INTO `th_money_log` VALUES ('3', '1', '20160313', '1000.00', '充值', '收入', '交易成功', '1458699326');
+
+-- ----------------------------
+-- Table structure for th_node
+-- ----------------------------
+DROP TABLE IF EXISTS `th_node`;
+CREATE TABLE `th_node` (
+  `id` smallint(6) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(20) NOT NULL,
+  `title` varchar(50) DEFAULT NULL,
+  `status` tinyint(1) DEFAULT '0',
+  `remark` varchar(255) DEFAULT NULL,
+  `sort` smallint(6) unsigned DEFAULT NULL,
+  `pid` smallint(6) unsigned NOT NULL,
+  `level` tinyint(1) unsigned NOT NULL,
+  `type` tinyint(1) NOT NULL DEFAULT '0',
+  `group_id` tinyint(3) unsigned DEFAULT '0',
+  PRIMARY KEY (`id`),
+  KEY `level` (`level`),
+  KEY `pid` (`pid`),
+  KEY `status` (`status`),
+  KEY `name` (`name`)
+) ENGINE=MyISAM AUTO_INCREMENT=92 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of th_node
+-- ----------------------------
+INSERT INTO `th_node` VALUES ('49', 'read', '查看', '1', '', null, '30', '3', '0', '0');
+INSERT INTO `th_node` VALUES ('40', 'Index', '默认模块', '1', '', '0', '1', '2', '0', '0');
+INSERT INTO `th_node` VALUES ('39', 'index', '列表', '1', '', null, '30', '3', '0', '0');
+INSERT INTO `th_node` VALUES ('37', 'resume', '恢复', '1', '', null, '30', '3', '0', '0');
+INSERT INTO `th_node` VALUES ('36', 'forbid', '禁用', '1', '', null, '30', '3', '0', '0');
+INSERT INTO `th_node` VALUES ('35', 'foreverdelete', '删除', '1', '', null, '30', '3', '0', '0');
+INSERT INTO `th_node` VALUES ('34', 'update', '更新', '1', '', null, '30', '3', '0', '0');
+INSERT INTO `th_node` VALUES ('33', 'edit', '编辑', '1', '', null, '30', '3', '0', '0');
+INSERT INTO `th_node` VALUES ('32', 'insert', '写入', '1', '', null, '30', '3', '0', '0');
+INSERT INTO `th_node` VALUES ('31', 'add', '新增', '1', '', null, '30', '3', '0', '0');
+INSERT INTO `th_node` VALUES ('30', 'Public', '公共模块', '1', '', '0', '1', '2', '0', '0');
+INSERT INTO `th_node` VALUES ('7', 'User', '后台用户', '1', '', '4', '1', '2', '0', '2');
+INSERT INTO `th_node` VALUES ('6', 'Role', '角色管理', '1', '', '3', '1', '2', '0', '2');
+INSERT INTO `th_node` VALUES ('2', 'Node', '节点管理', '1', '', '2', '1', '2', '0', '2');
+INSERT INTO `th_node` VALUES ('1', 'Admin', '后台管理', '1', '', null, '0', '1', '0', '0');
+INSERT INTO `th_node` VALUES ('50', 'main', '空白首页', '1', '', null, '40', '3', '0', '0');
+INSERT INTO `th_node` VALUES ('84', 'DailyTask', '工作日志', '1', '每日工作日志', '1', '1', '2', '0', '2');
+INSERT INTO `th_node` VALUES ('85', 'weeklyReport', '小组周报', '1', '小组全部成员周报汇总', null, '84', '3', '0', '0');
+INSERT INTO `th_node` VALUES ('86', 'monthlyReport', '组员月报', '1', '每个组员月报', null, '84', '3', '0', '0');
+INSERT INTO `th_node` VALUES ('87', 'weeksByYear', '周列表', '1', '列出一年全部周', null, '84', '3', '0', '0');
+INSERT INTO `th_node` VALUES ('88', 'SystemDB', '数据库管理', '1', '', '0', '1', '2', '0', '0');
+INSERT INTO `th_node` VALUES ('89', 'backupDB', '数据库备份', '1', '', null, '88', '3', '0', '0');
+INSERT INTO `th_node` VALUES ('90', 'editWeekSummary', '周总结编辑页面', '1', '', null, '84', '3', '0', '0');
+INSERT INTO `th_node` VALUES ('91', 'updateWeekSummary', '编辑周总结', '1', '', null, '84', '3', '0', '0');
 
 -- ----------------------------
 -- Table structure for th_orders
@@ -183,7 +373,7 @@ CREATE TABLE `th_orders` (
 -- ----------------------------
 INSERT INTO `th_orders` VALUES ('1', '20160310', '0', 'test123456', '0000', '1', '0', '0', '0.00', '0.00', 'RMB', null, null, null, '0.00', null, null, '33333', null, null, '2', '1457918914', '1457918914');
 INSERT INTO `th_orders` VALUES ('10', '20160311', '1', '0', '0000', '2', '0', '0', '0.00', '0.00', 'RMB', null, '张三', null, '0.00', '福州鼓楼', '15312301238', null, null, null, '1', '1458097655', '1458026471');
-INSERT INTO `th_orders` VALUES ('11', '20160312', '1', '0', '0000', '3', '0', '0', '0.00', '0.00', 'RMB', null, '张三', null, '0.00', '福州鼓楼', '15312301238', null, null, null, '0', '1458097655', '1458097655');
+INSERT INTO `th_orders` VALUES ('11', '20160312', '3', '0', '0000', '3', '0', '0', '0.00', '0.00', 'RMB', null, '张三', null, '0.00', '福州鼓楼', '15312301238', null, null, null, '0', '1458097655', '1458097655');
 INSERT INTO `th_orders` VALUES ('13', '20160313', '1', '0', '0000', '3', '0', '0', '0.00', '100.00', 'RMB', null, '张三', null, '0.00', '福州鼓楼', '15312301238', null, null, '1213213246', '1', '1458097655', '1458097655');
 INSERT INTO `th_orders` VALUES ('16', '20160314', '1', '0', '0000', '3', '0', '0', '0.00', '0.00', 'RMB', null, '张三', null, '0.00', '福州鼓楼', '15312301238', null, null, null, '4', '1458097655', '1458097655');
 
@@ -196,7 +386,7 @@ CREATE TABLE `th_orders_info` (
   `ord_id` int(8) NOT NULL DEFAULT '0' COMMENT '订单表id',
   `goods_id` int(8) NOT NULL DEFAULT '0' COMMENT '商品id',
   `orderId` varchar(20) DEFAULT NULL COMMENT '订单号',
-  `goodsName` varchar(20) DEFAULT NULL COMMENT '商品名称',
+  `goodsname` varchar(20) DEFAULT NULL COMMENT '商品名称',
   `qty` int(4) NOT NULL DEFAULT '0' COMMENT '购买数量',
   `return_qty` int(4) NOT NULL DEFAULT '0' COMMENT '申请退货数量',
   `is_back` int(4) NOT NULL DEFAULT '0' COMMENT '完成退货数量',
@@ -226,12 +416,12 @@ DROP TABLE IF EXISTS `th_postage`;
 CREATE TABLE `th_postage` (
   `pos_id` int(4) NOT NULL AUTO_INCREMENT,
   `name` varchar(10) DEFAULT NULL COMMENT '快递名称',
-  `startPoint` varchar(10) DEFAULT NULL COMMENT '出发地',
-  `endPoint` varchar(10) DEFAULT NULL COMMENT '目的地',
-  `firstPrice` decimal(10,2) DEFAULT NULL COMMENT '首重价格',
-  `nextPrice` decimal(10,2) DEFAULT NULL COMMENT '续重价格',
+  `startpoint` varchar(10) DEFAULT NULL COMMENT '出发地',
+  `endpoint` varchar(10) DEFAULT NULL COMMENT '目的地',
+  `firstprice` decimal(10,2) DEFAULT NULL COMMENT '首重价格',
+  `nextprice` decimal(10,2) DEFAULT NULL COMMENT '续重价格',
   `day` tinyint(1) DEFAULT NULL COMMENT '到达天数',
-  `firstHeavy` tinyint(1) DEFAULT NULL COMMENT '首重',
+  `firstheavy` tinyint(1) DEFAULT NULL COMMENT '首重',
   PRIMARY KEY (`pos_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COMMENT='邮费表';
 
@@ -247,11 +437,11 @@ INSERT INTO `th_postage` VALUES ('2', '申通', '浙江', '江苏', '5.00', '2.0
 DROP TABLE IF EXISTS `th_promotions`;
 CREATE TABLE `th_promotions` (
   `pro_id` int(4) NOT NULL AUTO_INCREMENT,
-  `OrderId` varchar(20) NOT NULL DEFAULT '0' COMMENT '订单编号',
-  `ProAmount` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '优惠价格',
-  `ProRemark` varchar(50) NOT NULL DEFAULT '0' COMMENT '说明',
-  `UseTime` int(10) NOT NULL DEFAULT '0' COMMENT '使用时间',
-  `AddTime` int(10) NOT NULL DEFAULT '0' COMMENT '添加时间',
+  `orderid` varchar(20) NOT NULL DEFAULT '0' COMMENT '订单编号',
+  `proamount` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '优惠价格',
+  `proremark` varchar(50) NOT NULL DEFAULT '0' COMMENT '说明',
+  `usetime` int(10) NOT NULL DEFAULT '0' COMMENT '使用时间',
+  `addtime` int(10) NOT NULL DEFAULT '0' COMMENT '添加时间',
   PRIMARY KEY (`pro_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='优惠活动表';
 
@@ -260,25 +450,83 @@ CREATE TABLE `th_promotions` (
 -- ----------------------------
 
 -- ----------------------------
+-- Table structure for th_user
+-- ----------------------------
+DROP TABLE IF EXISTS `th_user`;
+CREATE TABLE `th_user` (
+  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
+  `account` varchar(64) NOT NULL,
+  `nickname` varchar(50) NOT NULL,
+  `password` char(32) NOT NULL,
+  `bind_account` varchar(50) NOT NULL,
+  `last_login_time` int(11) unsigned DEFAULT '0',
+  `last_login_ip` varchar(40) DEFAULT NULL,
+  `login_count` mediumint(8) unsigned DEFAULT '0',
+  `verify` varchar(32) DEFAULT NULL,
+  `email` varchar(50) NOT NULL,
+  `qq` varchar(20) DEFAULT NULL,
+  `mobile` varchar(50) DEFAULT '',
+  `create_time` int(11) unsigned NOT NULL,
+  `update_time` int(11) unsigned NOT NULL,
+  `status` tinyint(1) DEFAULT '0',
+  `type_id` tinyint(2) unsigned DEFAULT '0',
+  `info` text NOT NULL,
+  `department` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `account` (`account`)
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of th_user
+-- ----------------------------
+INSERT INTO `th_user` VALUES ('1', 'admin', '管理员', '21232f297a57a5a743894a0e4a801fc3', '', '1409295634', '127.0.0.1', '16', '8888', 'support@j-ui.com', null, '备注信息', '1222907803', '1239977420', '1', '0', '', null);
+INSERT INTO `th_user` VALUES ('2', 'z', '张慧华', 'e10adc3949ba59abbe56e057f20f883e', '', '1409787273', '127.0.0.1', '22', null, 'z@j-ui.com', '350863780', '13621397091', '1393949054', '1413165671', '1', '0', '', '1');
+INSERT INTO `th_user` VALUES ('3', 'w', '吴平', 'e10adc3949ba59abbe56e057f20f883e', '', '1394200646', '127.0.0.1', '0', null, 'w@j-ui.com', '465046815', '', '1393949111', '1394160531', '1', '0', '', '1');
+INSERT INTO `th_user` VALUES ('4', 'd', '杜权', 'e10adc3949ba59abbe56e057f20f883e', '', '1394173966', '127.0.0.1', '0', null, 'd@j-ui.com', '8560685', '', '1394173790', '0', '1', '0', '', '1');
+
+-- ----------------------------
 -- Table structure for th_users
 -- ----------------------------
 DROP TABLE IF EXISTS `th_users`;
 CREATE TABLE `th_users` (
   `user_id` int(8) NOT NULL AUTO_INCREMENT COMMENT '用户id',
+  `distributorid` int(10) NOT NULL COMMENT '商家编号',
   `username` varchar(20) NOT NULL DEFAULT '0' COMMENT '用户名',
   `password` varchar(32) NOT NULL DEFAULT '0' COMMENT '密码',
-  `key` varchar(30) NOT NULL DEFAULT '0',
+  `key` varchar(30) NOT NULL COMMENT '商家秘钥',
   `code` varchar(30) NOT NULL DEFAULT '0' COMMENT '效验码',
   `money` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '用户资金',
-  `validityTime` int(10) NOT NULL DEFAULT '0' COMMENT '有效时间',
-  `vheckTime` int(10) NOT NULL DEFAULT '0' COMMENT '检测时间',
-  `addTime` int(10) NOT NULL DEFAULT '0' COMMENT '注册时间',
-  PRIMARY KEY (`user_id`)
+  `validitytime` int(10) NOT NULL DEFAULT '0' COMMENT '有效时间',
+  `vhecktime` int(10) NOT NULL DEFAULT '0' COMMENT '检测时间',
+  `addtime` int(10) NOT NULL DEFAULT '0' COMMENT '注册时间',
+  PRIMARY KEY (`user_id`),
+  UNIQUE KEY `distributorId` (`distributorid`),
+  UNIQUE KEY `key` (`key`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COMMENT='用户表';
 
 -- ----------------------------
 -- Records of th_users
 -- ----------------------------
-INSERT INTO `th_users` VALUES ('1', 'test123456', 'e10adc3949ba59abbe56e057f20f883e', 'test123456', '123', '0.00', '16070400', '1457684736', '1457684736');
-INSERT INTO `th_users` VALUES ('3', 'test', 'e10adc3949ba59abbe56e057f20f883e', 'test123456', '123', '0.00', '16070400', '1457684736', '1457684736');
-INSERT INTO `th_users` VALUES ('4', 'hb', 'e10adc3949ba59abbe56e057f20f883e', 'test123456', '123', '0.00', '16070400', '1457684736', '1457684736');
+INSERT INTO `th_users` VALUES ('1', '3', 'test123456', 'e10adc3949ba59abbe56e057f20f883e', 'test123456', '123', '0.00', '16070400', '1457684736', '1457684736');
+INSERT INTO `th_users` VALUES ('3', '2', 'test', 'e10adc3949ba59abbe56e057f20f883e', 'test123457', '123', '0.00', '16070400', '1457684736', '1457684736');
+INSERT INTO `th_users` VALUES ('4', '1', 'hb', 'e10adc3949ba59abbe56e057f20f883e', 'test123458', '123', '0.00', '16070400', '1457684736', '1457684736');
+
+-- ----------------------------
+-- Table structure for th_week_summary
+-- ----------------------------
+DROP TABLE IF EXISTS `th_week_summary`;
+CREATE TABLE `th_week_summary` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '周总结ID',
+  `department` varchar(50) DEFAULT NULL COMMENT '部门',
+  `content` text COMMENT '日志内容',
+  `week_date` date DEFAULT NULL COMMENT '每周一日期',
+  `create_time` int(10) unsigned DEFAULT NULL,
+  `update_time` int(10) unsigned DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of th_week_summary
+-- ----------------------------
+INSERT INTO `th_week_summary` VALUES ('1', '1', '1) test1\r\n2) test2\r\n3) test3', '2014-03-31', '1396319989', '1396320020');
+INSERT INTO `th_week_summary` VALUES ('2', '1', 'DWZ jUI\r\nDWZ+Java\r\nDWZ+PHP', '2014-03-03', '1396320373', null);
