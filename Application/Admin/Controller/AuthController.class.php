@@ -1,7 +1,15 @@
 <?php 
 namespace Admin\Controller;
-use Admin\Controller\AdminController;
-class AuthController extends AdminController{
+use Think\Controller;
+// use Admin\Controller\AdminController;
+class AuthController extends Controller{
+    // 权限规则
+    public function auth_rule(){
+        $auth_rule = M("auth_rule");
+        $list = $auth_rule->select();
+        $this->assign("list",$list);
+        $this->display();
+    }
 
 	public function accessList(){
 		$m=D('RuleView');

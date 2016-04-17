@@ -3,7 +3,6 @@ namespace Home\Controller;
 use Think\Controller;
 class IndexController extends Controller {
     public function index(){
-        phpinfo();
         $this->show('<p>欢迎使用 <b>ThinkPHP</b>！</p>','utf-8');
     }
 
