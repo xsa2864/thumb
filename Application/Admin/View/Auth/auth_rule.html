@@ -30,13 +30,24 @@
 			<volist name="list" id="vo" key="k">
 			<tr target="sid_user" rel="{$k}">
 				<td>{$k}</td>
-				<td>{$vo.title}</td>
-				<td>{$vo.name}</td>
+				<td style="font-weight: bold;" align="center">{$vo.title}</td>
+				<td >{$vo.name}</td>
 				<td>{$vo.type}</td>
 				<td>{$vo.condition}</td>
 				<td>{$vo.status}</td>
 				<td><a href="javascript:;">删除</a></td>
 			</tr>	
+				<volist name="vo.child" id="item" key="ck">
+				<tr target="sid_user" rel="c{$ck}">
+					<td></td>
+					<td>  {$item.title}</td>
+					<td>{$item.name}</td>
+					<td>{$item.type}</td>
+					<td>{$item.condition}</td>
+					<td>{$item.status}</td>
+					<td><a href="javascript:;">删除</a></td>
+				</tr>	
+				</volist>
 			</volist>
 		</tbody>
 	</table>

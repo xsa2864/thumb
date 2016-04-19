@@ -1,20 +1,36 @@
 <?php 
 namespace Admin\Controller;
+
+use Admin\Controller\AdminController;
 use Think\Controller;
+
 // use Admin\Controller\AdminController;
 class AuthController extends Controller{
     // 权限规则
     public function auth_rule(){
         $auth_rule = M("auth_rule");
         $list = $auth_rule->select();
-        $this->assign("list",$list);
+        $tree = $this->get_arr($list);
+        $this->assign("list",$tree);
         $this->display();
+    }
+
+    // 递归
+    static function get_arr($list,$pid=0){
+    	$tree_arr = '';
+    	foreach ($list as $key => $value) {
+    		if($value['pid'] == $pid){
+    			$value['child'] = self::get_arr($list,$value['id']);    			
+    			$tree_arr[]=$value;
+    		}
+    	}
+    	return $tree_arr;
     }
 
 	public function accessList(){
 		$m=D('RuleView');
 		$count=$m->count();
-		$page=new \Think\Page($count,5);
+		$page=new \Think\Page($count,20);
 		$page->setConfig('theme','%FIRST% %UP_PAGE% %LINK_PAGE% %DOWN_PAGE% %END% %HEADER%');
 		$show=$page->show();
 		$data=$m->limit($page->firstRow.','.$page->listRows)->order('id desc')->select();

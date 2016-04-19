@@ -7,32 +7,27 @@ class LoginController extends Controller{
 		$this->display();
 	}
 
-	//验证码
-	public function verify(){
-		$verify=new \Think\Verify();
-		$verify->entry();
-	}
 
 	//登录验证
 	public function checkLogin(){
-		$where['username']=I("username");
+		$where['mobile']=I("mobile");
 		$where['password']=md5(I("password"));
 		$code=I('code');
 		$verify=new \Think\Verify();
 		if($verify->check($code)){
-			$m=M("members");
+			$m=M("user");
 			$result=$m->where($where)->find();
 			$m=null;
 			$verify=null;
 			if($result){
 				session('username',$result['username']);
 				session('uid',$result['uid']);
-				$this->success('登录成功!',U('Admin/Index/index'));
+				$this->redirect('Admin/Index/index');
 			}else{
-				$this->error('账号或密码错误!',U('Admin/Login/index'));
+				$this->error('账号或密码错误!',U('Admin/Login/login'));
 			}
 		}else{
-			$this->error('验证码错误!',U('Admin/Login/index'));
+			$this->error('验证码错误!',U('Admin/Login/login'));
 		}
 	}
 
@@ -40,6 +35,6 @@ class LoginController extends Controller{
 	public function logout(){
 		unset($_SESSION['username']);
 		unset($_SESSION['uid']);
-		$this->success('退出成功!',U('Admin/Index/index'));
+		$this->success('退出成功!',U('Admin/Login/login'));
 	}
 }
