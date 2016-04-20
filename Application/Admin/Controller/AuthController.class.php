@@ -6,6 +6,29 @@ use Think\Controller;
 
 // use Admin\Controller\AdminController;
 class AuthController extends Controller{
+
+	// 删除规则
+	public function delrule(){
+		$id = I('id');
+		$pid = I('pid');
+
+		$re_status['code']=0;
+		$re_status['msg']="删除失败!";
+
+		$auth_rule = M("auth_rule");
+		if($pid == 0){
+			$where['id'] = $id;
+			$where['pid'] = $pid;
+			if($auth_rule->where($where)->delete()){
+				$re_status['code']=1;
+				$re_status['msg']="删除成功!";
+			}
+		}else{
+
+		}
+		echo json_encode($re_status);
+	}
+
     // 权限规则
     public function auth_rule(){
         $auth_rule = M("auth_rule");
