@@ -35,7 +35,11 @@
 				<td>{$vo.type}</td>
 				<td>{$vo.condition}</td>
 				<td>{$vo.status}</td>
-				<td><a href="javascript:;">删除</a></td>
+				<td>
+					<a class="add" href="javascript:;" target="navTab">添加</a>
+					<a title="编辑" target="navTab" href="javascript:;" class="btnEdit">编辑</a>
+					<a title="删除" href="javascript:delrule({$vo.id},{$vo.pid});" >删除</a>
+				</td>
 			</tr>	
 				<volist name="vo.child" id="item" key="ck">
 				<tr target="sid_user" rel="c{$ck}">
@@ -45,7 +49,10 @@
 					<td>{$item.type}</td>
 					<td>{$item.condition}</td>
 					<td>{$item.status}</td>
-					<td><a href="javascript:;">删除</a></td>
+					<td>
+						<a title="编辑" target="navTab" href="javascript:;" class="btnEdit">编辑</a>
+						<a title="删除" href="javascript:delrule({$item.id},{$item.pid});" class="btnDel">删除</a>
+					</td>
 				</tr>	
 				</volist>
 			</volist>
@@ -67,3 +74,18 @@
 
 	</div>
 </div>
+<script type="text/javascript">
+	function delrule(id,pid){
+		if(alertMsg.confirm("确定删除！")){
+			$.getJSON(
+				"{:U('Auth/delrule')}",
+				{id:id,pid:pid},
+				function(data){
+				 	alertMsg.info(data)
+				}
+			)			
+		}
+	}
+
+
+</script>
