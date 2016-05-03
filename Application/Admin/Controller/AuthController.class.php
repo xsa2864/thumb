@@ -7,6 +7,24 @@ use Think\Controller;
 // use Admin\Controller\AdminController;
 class AuthController extends Controller{
 
+    //权限组
+    public function auth_group(){
+
+        $auth_group = M("auth_group");
+        $data = $auth_group->select();
+
+        $auth_rule = M("auth_rule");
+        $list = $auth_rule->select();
+        $tree = $this->get_arr($list);
+
+        $this->assign("data",$data);
+        $this->assign("list",$tree);
+        $this->display();
+    } 
+    // 添加权限组
+    public function add_auth_group(){
+        $this->display();
+    }
 	// 删除规则
 	public function delrule(){
 		$id = I('id');

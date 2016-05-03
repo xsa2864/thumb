@@ -9,52 +9,33 @@
 <div class="pageContent">
 	<div class="panelBar">
 		<ul class="toolBar">
-			<li class="line">line</li>
-			<li><a class="add" href="demo_page4.html" target="navTab"><span>添加</span></a></li>
-			<li class="line">line</li>			
+			<li class="line"></li>
+			<li><a class="add" href="{:U('Auth/add_auth_group')}" target="navTab"><span>添加</span></a></li>
+			<li class="line"></li>			
 		</ul>
 	</div>
 	<table class="table" width="100%" layoutH="138">
 		<thead>
 			<tr>
 				<th width="50" align="center">序号</th>
-				<th width="150">名称</th>
-				<th>规则名称</th>
-				<th width="120">是否启用规则表达式</th>
-				<th width="180">规则表达式</th>
+				<th width="120">权限名称</th>
 				<th width="50" align="center">状态</th>
+				<th width="250">描述</th>
 				<th>操作</th>
 			</tr>
 		</thead>
 		<tbody>
-			<volist name="list" id="vo" key="k">
+			<volist name="data" id="vo" key="k">
 			<tr target="sid_user" rel="{$k}">
 				<td>{$k}</td>
-				<td style="font-weight: bold;" align="center">{$vo.title}</td>
-				<td >{$vo.name}</td>
-				<td>{$vo.type}</td>
-				<td>{$vo.condition}</td>
+				<td>{$vo.title}</td>
 				<td>{$vo.status}</td>
+				<td>{$vo.describe}</td>
 				<td>
-					<a class="add" href="javascript:;" target="navTab">添加</a>
 					<a title="编辑" target="navTab" href="javascript:;">编辑</a>
 					<a title="删除" href="javascript:delrule({$vo.id},{$vo.pid});" >删除</a>
 				</td>
-			</tr>	
-				<volist name="vo.child" id="item" key="ck">
-				<tr target="sid_user" rel="c{$ck}">
-					<td>|-{$ck}</td>
-					<td>  {$item.title}</td>
-					<td>{$item.name}</td>
-					<td>{$item.type}</td>
-					<td>{$item.condition}</td>
-					<td>{$item.status}</td>
-					<td>
-						<a title="编辑" target="navTab" href="javascript:;">编辑</a>
-						<a title="删除" href="javascript:delrule({$item.id},{$item.pid});">删除</a>
-					</td>
-				</tr>	
-				</volist>
+			</tr>				
 			</volist>
 		</tbody>
 	</table>
