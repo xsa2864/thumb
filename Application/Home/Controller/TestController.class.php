@@ -3,6 +3,7 @@ namespace Home\Controller;
 use Think\Controller;
 class TestController extends Controller {
 
+
 	//2、创建订单
     public function test_create(){
         $url = "http://115.238.169.185:8080/index.php?g=admin&m=ApiOrderNew&a=OrderPostXml";

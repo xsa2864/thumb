@@ -9,3 +9,5 @@ Runtime/
 config.php
 .tags
 .tags_sorted_by_file
+.gitignore
+test.php

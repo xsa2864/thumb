@@ -20,8 +20,7 @@ class ApiController extends Controller {
       }
 
 		  // 解析
-		  // $pr_arr = json_decode($data,true);
-      $pr_arr =I('data','');
+		  $pr_arr = json_decode(I('data','',false),true);
 
   		if(!isset($pr_arr['action'])){
   			$return_msg['ResultMsg'] = "请指明动作";
@@ -39,7 +38,7 @@ class ApiController extends Controller {
 
   		}elseif($action == 'get_goods_some_info'){
         // 获取部分商品信息
-        $a_data = $this->get_goods_some_info($pr_arr['goods_id']);
+        $a_data = $this->get_goods_some_info($pr_arr['goods_no']);
         
       }elseif($action == 'get_goods'){
   			// 获取分页商品信息
@@ -62,7 +61,10 @@ class ApiController extends Controller {
   			// 获取订单状态
   			$a_data = $this->order_status($orderid);
   			
-  		}
+  		}elseif($action == "get_category"){
+        // 获取分类树
+        $a_data = $this->get_category();
+      }
   		isset($a_data['Result']) ? $return_msg['Result'] = $a_data['Result'] : '';
   		isset($a_data['ResultMsg']) ? $return_msg['ResultMsg'] = $a_data['ResultMsg'] : '';
   		isset($a_data['Content']) ? $return_msg['Content'] = $a_data['Content'] : '';
@@ -76,20 +78,16 @@ class ApiController extends Controller {
   * return 部分信息
   * 2016.4.6
   */
-  public function get_goods_some_info($goods_id=''){ 
+  public function get_goods_some_info($goods_no=''){ 
 
-      if($goods_id!=''){
-        if(is_array($goods_id)){
-            if(count($goods_id)>1){
-              $where = "gs.goods_id in (".implode(',',$goods_id).")";
-            }else{
-              $where = "gs.goods_id='".$goods_id[0]."'";
-            }          
+      if($goods_no!=''){
+        if(strpos($goods_no,",")>0){
+          $where = "gs.goods_no in (".$goods_no.")";
         }else{
-          $where = "gs.goods_id = '$goods_id'";
+          $where = "gs.goods_no='".$goods_no."'";
         }
-
-        $sql = "SELECT goods_id,goodsname,goods_no,price FROM th_goods gs WHERE $where";
+      
+        $sql = "SELECT goods_no,brand,goodsname,unit,price,img FROM th_goods gs WHERE $where";
         $data = M()->query($sql);
         $return_msg['Content'] = $data;
         
@@ -113,24 +111,22 @@ class ApiController extends Controller {
   public function get_goods_info($goods_no=''){ 
 
     	if($goods_no!=''){
-        if(is_array($goods_no)){
-            if(count($goods_no)>1){
-              $where = "gs.goods_no in (".implode(',',$goods_no).")";
-            }else{
-              $where = "gs.goods_no='".$goods_no[0]."'";
-            }          
+        if(strpos($goods_no,",")>0){
+          $where = "gs.goods_no in (".$goods_no.")";
         }else{
-          $where = "gs.goods_no = '$goods_no'";
+          $where = "gs.goods_no='".$goods_no."'";
         }
 
 	    	// $return_msg['Content'] = M('goods')->where("goods_id='".$goods_id."'")->find();
-	    	$sql = "SELECT * FROM th_goods gs LEFT JOIN th_goods_photos gps ON gps.goods_id=gs.goods_id	WHERE $where";
+	    	// $sql = "SELECT * FROM th_goods gs LEFT JOIN th_goods_photos gps ON gps.goods_id=gs.goods_id	WHERE $where";
+        $sql = "SELECT * FROM th_goods gs WHERE $where";
+
 			  $data = M()->query($sql);
 			  $return_msg['Content'] = $data;
 			
 	    	if(!empty($return_msg['Content'])){
 	    		$return_msg['Result'] = "T";
-				  $return_msg['ResultMsg'] = "success$sql";
+				  $return_msg['ResultMsg'] = "success";
 	    		return $return_msg;
 	    	}  	
     	}
@@ -144,8 +140,14 @@ class ApiController extends Controller {
   public function get_goods($arr){ 
 
     	if(isset($arr['page'])){
-    		$return_msg['Content']  = M('goods')->limit($arr['page'],$arr['num'])->select();
-        $return_msg['Total']    = M('goods')->count();
+        $where = ""; 
+        if(!empty($arr['goods_no_list'])){
+          $where = "goods_no not in (".$arr['goods_no_list'].")"; 
+        }
+
+        $s_num     = $arr['page'] <= 1 ? 0 : $arr['page']*$arr['num'];
+    		$return_msg['Content']  = M('goods')->field('goods_no,brand,goodsname,unit,price,img')->where($where)->limit($s_num,$arr['num'])->select();
+        $return_msg['Total']    = M('goods')->where($where)->count();
         $return_msg['Page']     = $arr['page'] <= 1 ? 1 : $arr['page'];
     		if(!empty($return_msg['Content'])){
 	    		$return_msg['Result'] = "T";
@@ -291,15 +293,14 @@ class ApiController extends Controller {
 			$return_msg['ResultMsg'] = "参数有问题";
 			return $return_msg;
 		}
-		
+
 		$check_key = M('users')->where("distributorid='".$arr['distributorid']."'")->getField('key');
 
 		if(!$check_key){
-
 			$return_msg['ResultMsg'] = "key有问题";
 			return $return_msg;
 		}
-
+    $arr['data'] = I('data','',false);
     $arr['time'] = (int)$arr['time'];
     $arr['key'] = $check_key;
 
@@ -327,5 +328,33 @@ class ApiController extends Controller {
         $paramStr = serialize($params);
         return md5($paramStr);
   }
+  
 
+
+  /*
+   *  获取分类信息
+   *  2016.4.22
+   */
+  public function get_category(){
+      $list = M('category')->field("id,name,parent_id")->select();
+      if(empty($list)){
+        $return_msg['ResultMsg'] = "没查询到信息!";
+      }else{
+        $return_msg['Result'] = "T";
+        $return_msg['ResultMsg'] = "success";
+        $return_msg['Content'] = $this->get_tree($list);
+      }
+      return $return_msg;
+  }
+  // 递归查询
+  public function get_tree($list,$pid=0){
+      $tree = '';
+      foreach ($list as $key => $value) {
+        if($value['parent_id']==$pid){
+          $value['child'] = $this->get_tree($list,$value['id']);
+          $tree[]= $value;
+        }
+      }
+      return $tree;
+  }
 }
