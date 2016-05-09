@@ -37,4 +37,5 @@ class MoneyController extends Controller {
 		}
 		$this->display("detail");
 	}
+
 }

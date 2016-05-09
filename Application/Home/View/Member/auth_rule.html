@@ -1,0 +1,137 @@
+<extend name="Public:base" />
+
+<block name="main">
+<br>
+<ul class="sui-breadcrumb">
+    <li><a href="#">首页</a></li>
+    <li class="active">会员列表</li>
+</ul>
+<button class="sui-btn btn-primary" id="J_addsuppliers" data-toggle="modal" data-target="#J_addsuppliersDialog" data-width="large" data-backdrop="static">添加规则</button>
+
+<br><br>
+<table class="sui-table table-bordered">
+  <thead>
+    <tr>
+      <th>序号</th>
+      <th>标题</th>
+      <th>规则名称</th>
+      <th>规则条件</th>
+      <th>状态</th>
+      <th>操作</th>
+    </tr>
+  </thead>
+  <tbody>
+  	<volist name="list" id="vo" key="k">  	
+	  <tr id="c_{$k}">
+      <td>{$k}</td>
+      <td>{$vo.title}</td>
+      <td>{$vo.name}</td>     
+      <td>{$vo.condition}</td>
+      <td>{$vo.status}</td>
+      <td>
+        <a href="{:U('Member/edit',array('action'=>'edit','id'=>$vo['id']))}">编辑</a>
+        <a href="javascript:auth_del({$vo.id},'c_{$k}')">删除</a>
+      </td>
+    </tr> 
+    <volist name="vo.child" id="item" key="ck">    
+    <tr id="ck_{$ck}">
+      <td></td>
+      <td>{$item.title}</td>
+      <td>{$item.name}</td>     
+      <td>{$item.condition}</td>
+      <td>{$item.status}</td>
+      <td>
+        <a href="{:U('Member/edit',array('action'=>'edit','id'=>$item['id']))}">编辑</a>
+        <a href="javascript:auth_del({$item.id},'ck_{$ck}')">删除</a>
+      </td>
+    </tr>   
+    </volist>  
+  	</volist>
+  </tbody>
+</table>
+
+<div id="J_addsuppliersDialog" tabindex="-1" role="dialog" class="sui-modal hide fade" data-addsupplierurl="http://" data-getsuppliersurl="http://xxx">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <button type="button" data-dismiss="modal" aria-hidden="true" class="sui-close">×</button>
+              <h4 id="myModalLabel" class="modal-title">添加权限规则</h4>
+          </div>
+          <div class="modal-body sui-form form-horizontal">
+<form class="sui-form form-horizontal" action="{:U('Member/auth_edit')}" method="post" id="op_form">
+  <div class="control-group">
+    <label class="control-label">归属分类：</label>
+    <div class="controls">
+      <span class="sui-dropdown dropdown-bordered select">
+        <span class="dropdown-inner">
+          <a id="drop4" role="button" data-toggle="dropdown" href="#" class="dropdown-toggle input-medium">
+          <input value="0" name="pid" type="hidden"><i class="caret"></i><span>主分类</span>
+          </a>
+          <ul id="menu4" role="menu" aria-labelledby="drop4" class="sui-dropdown-menu">
+            <volist name="list" id="vo">    
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0);" value="{$vo.id}">{$vo.title}</a></li>
+            </volist>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0);" value="0">主分类</a></li>
+          </ul>
+        </span>
+      </span>
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label">标题：</label>
+    <input type="text" class="input-large" name="title">
+  </div>
+  <div class="control-group">
+    <label class="control-label">规则：</label>
+    <input type="text" class="input-large" name="name">
+  </div>
+  <div class="control-group">
+    <label class="control-label">条件：</label>
+    <input type="text" class="input-large" name="condition">
+  </div>
+  <div class="control-group">
+    <label class="control-label">是否开启：</label>
+    <label data-toggle="radio" class="radio-pretty inline checked">
+      <input type="radio" checked="checked" name="status" value="1"><span>开启</span>
+    </label>
+    <label data-toggle="radio" class="radio-pretty inline">
+      <input type="radio" name="status" value="0"><span>关闭</span>
+    </label> 
+  </div>
+  
+  <div class="control-group">
+    <div class="controls">
+      <input type="hidden" name="id">
+      <button type="submit" class="sui-btn btn-primary">保存</button>
+      <button type="reset" class="sui-btn" style="display: none;">重置</button>
+    </div>
+  </div>
+</form>
+          </div>
+      </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  function auth_del(id,ck){
+    if(confirm("确定删除!")){
+      $.ajax({
+          url:"{:U('Member/auth_del')}",
+          type:'post',
+          data:{id:id},
+          dataType:'json',
+          success:function(data){
+            if(data.code == 1){
+              $("#"+ck).attr("style","display:none");
+            }else{ 
+             alert(data.msg);
+            }
+          }
+      });
+    }
+  }
+  function auth_submit(){
+    $.getJSON("{:U('')}");
+  }
+</script>
+</block>

@@ -43,7 +43,7 @@ class GoodsController extends Controller {
 			}
 
 		}else{			
-			$level = M('category')->where("pid=0")->select();
+			$level = M('category')->where("parent_id=0")->select();
 			$this->assign('level',$level);
 
 			if($action == "add"){
@@ -51,7 +51,7 @@ class GoodsController extends Controller {
 				$this->assign('active',"添加");
 				$this->display();	
 			}elseif($action == "edit"){
-				$sql = "SELECT * FROM th_goods g LEFT JOIN th_category c ON g.cat_id=c.cat_id WHERE g.goods_id='$goods_id'";
+				$sql = "SELECT * FROM th_goods g LEFT JOIN th_category c ON g.cat_id=c.id WHERE g.goods_id='$goods_id'";
 				$data = M()->query($sql);
 				// $data = M('goods')->where("goods_id='$goods_id'")->select();
 				$this->assign('data',$data[0]);

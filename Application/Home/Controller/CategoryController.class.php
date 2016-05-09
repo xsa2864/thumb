@@ -22,20 +22,20 @@ class CategoryController extends Controller {
 			$data['name'] = I("name",'');
 			$data['level'] = I("level",'');
 			$data['pid'] = I("pid",'');
-			$data['seq']  = I("seq",'');
+			$data['sort']  = I("sort",'');
 			
 			if(M('category')->data($data)->add()){
 				$data['code'] = 1;
 				$data['msg'] = "执行成功!";
 			}
 		}elseif($action == "edit"){
-			$cat_id = I("cat_id",0);
+			$id = I("id",0);
 			$data['name'] = I("name",'');
 			$data['level'] = I("level",'');
 			$data['pid'] = I("pid",'');
-			$data['seq']  = I("seq",'');
+			$data['sort']  = I("sort",'');
 
-			if(M('category')->where("cat_id='$cat_id'")->save($data)){
+			if(M('category')->where("id='$id'")->save($data)){
 				$data['code'] = 1;
 				$data['msg'] = "执行成功!";
 			}
@@ -45,14 +45,14 @@ class CategoryController extends Controller {
 
 	// 获取分类信息
 	public function getInfo(){
-		$cat_id = I('cat_id',0);
+		$id = I('id',0);
 		$action = I('action','');
 
 		$data['code'] = 0;
 		$data['msg'] = "查询失败!";
 
 		if($action == 'getInfo'){
-			$data = M('category')->where("cat_id='$cat_id'")->find();
+			$data = M('category')->where("id='$id'")->find();
 			$data['code'] = 1;
 			$data['msg'] = "查询成功!";
 		}
@@ -61,14 +61,14 @@ class CategoryController extends Controller {
 	
 	// 删除商品
 	public function del(){
-		$cat_id = I('cat_id',0);
+		$id = I('id',0);
 		$action = I('action','');
 
 		$data['code'] = 0;
 		$data['msg'] = "删除失败!";
 
 		if($action == 'del'){
-			if(M('category')->where("cat_id='$cat_id'")->delete()){
+			if(M('category')->where("id='$id'")->delete()){
 				$data['code'] = 1;
 				$data['msg'] = "删除成功!";
 				echo json_encode($data);
@@ -80,14 +80,14 @@ class CategoryController extends Controller {
 	}
 
 	//递归方法
-	Static Public function getParents($cate,$cat_id=0){
+	Static Public function getParents($cate,$parent_id=0){
 		if (!is_array ($cate)){
 			return false;
 		}
 		$arr=array();
 		foreach ($cate as $v){
-			if ($cat_id == $v['pid']){
-				$v['child'] = self::getParents($cate,$v['cat_id']);
+			if ($parent_id == $v['parent_id']){
+				$v['child'] = self::getParents($cate,$v['id']);
 				$arr[]=$v;
 			}
 		}

@@ -7,6 +7,59 @@ use Think\Controller;
 // use Admin\Controller\AdminController;
 class AuthController extends Controller{
 
+    //权限组
+    public function auth_group(){
+
+        $auth_group = M("auth_group");
+        $data = $auth_group->select();
+
+        $auth_rule = M("auth_rule");
+        $list = $auth_rule->select();
+        $tree = $this->get_arr($list);
+
+        $this->assign("data",$data);
+        $this->assign("list",$tree);
+        $this->display();
+    } 
+
+    // 权限组界面
+    public function add_auth_group(){
+        $id = I('id');
+        $checked = array();
+        if($id){
+            $auth_group = M("auth_group");
+            $data = $auth_group->where("id='$id'")->find();
+            $checked = explode(',', $data['rules']);
+            $this->assign("data",$data);
+        }
+
+        $auth_rule = M("auth_rule");
+        $list = $auth_rule->select();
+        $tree = $this->get_arr($list,0,$checked);
+
+        $this->assign("list",$tree);
+        $this->display();
+    }
+
+    // 权限组操作
+    public function op_auth_group(){
+        $data = I();
+        $auth_group = M('auth_group');
+        $data['status'] = I('status') ? 1 : 0;
+        $data['rules'] = implode(',',I('rules'));
+        if(isset($data['id'])){
+            $rs = $auth_group->where("id='".$data['id']."'")->save($data);
+        }else{
+            unset($data['id']);
+            $rs = $auth_group->data($data)->add();
+        }
+
+        if($rs){
+            $this->success('添加成功');
+        }else{
+            $this->error('添加失败');
+        }
+    }
 	// 删除规则
 	public function delrule(){
 		$id = I('id');
@@ -38,12 +91,18 @@ class AuthController extends Controller{
         $this->display();
     }
 
+    
     // 递归
-    static function get_arr($list,$pid=0){
+    static function get_arr($list,$pid=0,$checked){
     	$tree_arr = '';
     	foreach ($list as $key => $value) {
     		if($value['pid'] == $pid){
-    			$value['child'] = self::get_arr($list,$value['id']);    			
+                if(in_array($value['id'], $checked)){
+                    $value['checked'] = 1;
+                }else{
+                    $value['checked'] = 0;
+                }
+                $value['child'] = self::get_arr($list,$value['id'],$checked);    
     			$tree_arr[]=$value;
     		}
     	}

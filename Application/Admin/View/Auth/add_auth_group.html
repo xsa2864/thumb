@@ -1,0 +1,54 @@
+<div class="pageContent">
+	<form method="post" action="{:U('Auth/op_auth_group')}" class="pageForm required-validate">
+<div class="pageFormContent" layoutH="60">
+	<fieldset>
+		<legend>权限组信息</legend>
+		<dl>
+			<dt>权限名称：</dt>
+			<dd><input name="title" type="text" value="{$data.title}" /></dd>
+		</dl>
+		<dl>
+			<dt>权限描述：</dt>
+			<dd><input name="describe" type="text" value="{$data.describe}" /></dd>
+		</dl>
+		<dl>
+			<label><input type="checkbox" name="status" value="1" <if condition="$data.status eq 1">checked</if>/>是否启用</label>
+		</dl>		
+	</fieldset>
+	<volist name="list" id="vo" key="k">
+		<fieldset>
+			<legend>
+			<input type="checkbox" name="rules[]" id="status_{$k}" value="{$vo.id}" onclick="check_all('status_{$k}',this.checked)" <if condition="$vo.checked eq 1">checked</if>/>
+			{$vo.title}
+			</legend>
+
+			<volist name="vo.child" id="item" key="ck">
+				<label><input type="checkbox" name="rules[]" id="status_{$k}" value="{$item.id}" <if condition="$vo.checked eq 1">checked</if>/>{$item.title}</label>
+			</volist>		
+		</fieldset>
+	</volist>
+</div>
+
+<div class="formBar">
+	<ul>
+		<li>
+			<div class="buttonActive">
+			<input type="hidden" name="id" value="{$data.id}">
+			<div class="buttonContent"><button type="submit">保存</button></div>
+			</div>
+		</li>
+	</ul>
+</div>		
+	</form>
+</div>
+
+
+<script type="text/javascript">
+	function check_all(id,str){
+            $("input[id="+id+"]").prop("checked", str);  
+    }
+    function save_info(){
+    	
+    }
+</script>
+
