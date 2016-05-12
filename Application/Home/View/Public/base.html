@@ -78,8 +78,8 @@
             <ul class="sui-nav nav-tabs nav-stacked">
               <li><a href="{:U('Member/index')}">会员列表</a></li>
               <li><a href="{:U('Money/index')}">资金列表</a></li>
+              <li><a href="{:U('Auth/index')}">权限组列表</a></li>
               <li><a href="{:U('Member/auth_rule')}">权限规则</a></li>
-              <li><a href="#">待定</a></li>
               <li><a href="#">待定</a></li>
               <li><a href="#">待定</a></li>
               <li><a href="#">待定</a></li>
@@ -114,17 +114,34 @@
       var url = location.href;
       var str = url.substr(url.indexOf('index.php')+10);
       var arr = str.split('/');
-      var mat_str = arr[0]+'/'+arr[1]+'/';     
+      var first = arr[0]+'/'+arr[1];
+      var second = arr[0]+'/'+arr[1]+'/'+arr[2];  
+      
+      var flag = false;
       $(".sidebar>ul>li").each(function(n){
           var n=n+1;
           $(".sidebar>ul>li:nth-child("+n+")>ul>li a").each(function(i){
             var href = $(this).attr("href");
-            if(href.indexOf(mat_str)>0){
+            if(href.indexOf(second)>0){
               $(".sidebar>ul>li:nth-child("+n+")").attr("class","active");
               $(".sidebar>ul>li:nth-child("+n+")>ul>li:nth-child("+(i+1)+")").attr("class","active");
-            }
+              flag = true;
+            }    
           });
       });     
+
+      if(!flag){
+        $(".sidebar>ul>li").each(function(n){
+          var n=n+1;
+          $(".sidebar>ul>li:nth-child("+n+")>ul>li a").each(function(i){
+            var href = $(this).attr("href");
+            if(href.indexOf(first)>0){
+              $(".sidebar>ul>li:nth-child("+n+")").attr("class","active");
+              $(".sidebar>ul>li:nth-child("+n+")>ul>li:nth-child("+(i+1)+")").attr("class","active");
+            }    
+          });
+        });     
+      }
       // 方法二
       // $(".sidebar>ul>li:nth-child({$path_one})").attr("class","active");
       // $(".sidebar>ul>li:nth-child({$path_one})>ul>li:nth-child({$path_two})").attr("class","active");

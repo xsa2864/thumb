@@ -13,34 +13,23 @@ class CategoryController extends Controller {
 	}
 	// 增删改查
 	public function edit(){
-		$action = I("action",'');
+		$id = I("id");
+		$re_msg['code'] = 0;
+		$re_msg['msg'] = "操作失败!";
 
-		$data['code'] = 0;
-		$data['msg'] = "操作失败!";
-
-		if($action == 'add'){
-			$data['name'] = I("name",'');
-			$data['level'] = I("level",'');
-			$data['pid'] = I("pid",'');
-			$data['sort']  = I("sort",'');
-			
-			if(M('category')->data($data)->add()){
-				$data['code'] = 1;
-				$data['msg'] = "执行成功!";
-			}
-		}elseif($action == "edit"){
-			$id = I("id",0);
-			$data['name'] = I("name",'');
-			$data['level'] = I("level",'');
-			$data['pid'] = I("pid",'');
-			$data['sort']  = I("sort",'');
-
-			if(M('category')->where("id='$id'")->save($data)){
-				$data['code'] = 1;
-				$data['msg'] = "执行成功!";
-			}
+		$data = I();
+		unset($data['id']);
+		$category = M('category');
+		if($id){			
+			$result = $category->where("id='$id'")->save($data);
+		}else{
+			$result = $category->data($data)->add();			
 		}
-		echo json_encode($data);
+		if($result){
+			$re_msg['code'] = 1;
+			$re_msg['msg'] = "执行成功!";
+		}
+		echo json_encode($re_msg);
 	}
 
 	// 获取分类信息

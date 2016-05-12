@@ -1,0 +1,84 @@
+<extend name="Public:base" />
+
+<block name="main">
+<br>
+<ul class="sui-breadcrumb">
+    <li><a href="#">首页</a></li>    
+    <li><a href="{:U('Auth/index')}">权限组列表</a></li>
+    <li class="active">{$link}</li>
+</ul>
+
+<form class="sui-form sui-row-fluid form-horizontal" id="filterForm" action="" method="post">
+	<div class="span">
+	<div class="control-group">
+		<label class="control-label" for="input001">标题：</label>
+		<div class="controls">
+			<input class="input-xlarge" type="text" name="title" id="input003" value="{$info.title}">
+		</div>
+	</div>
+	<div class="control-group">
+		<label class="control-label" for="input003">描述：</label>
+		<div class="controls">
+			<input class="input-xlarge" type="text" name="describe" id="input003" value="{$info.describe}">
+		</div>
+	</div>
+	<div class="control-group">
+		<label class="control-label" for="input004">状态：</label>
+		<div class="controls">
+			<label data-toggle="checkbox" class="checkbox-pretty inline checked">
+                <input type="checkbox" name="status" value="{$info.status}" <if condition="$info.status eq 1">checked="checked"</if>><span>是否开启</span>
+            </label>      
+		</div>
+	</div>
+	</div>
+	
+	<volist name="tree" id="vo" key="k">
+	<fieldset class="order_all">
+        <legend>
+            <strong>
+               <input type="checkbox" onclick="check_all({$k},this.checked)" name="rules[]" value="{$vo.id}" id="c_{$k}" <if condition="$item.checked eq 1">checked="checked"</if>>
+               <label for="c_{$k}">{$vo.title}</label>
+            </strong>
+        </legend>
+        <volist name="vo.child" id="item" key="ck">   
+        	<label>
+                <input type="checkbox" name="rules[]" id="c{$k}" value="{$item.id}" <if condition="$item.checked eq 1">checked="checked"</if>><span>{$item.title}</span>
+            </label>             
+        </volist>                  
+    </fieldset>	
+	</volist>
+	<span class="sub_right">
+	<div class="control-group">
+     	<div class="controls">
+     	  	<button type="submit" class="sui-btn btn-primary">提交保存</button>
+     	</div>
+    </div>
+	</span>		
+</form>
+<script type="text/javascript">
+
+function check_all(id,str){
+    $("input[id=c"+id+"]").prop("checked", str);  
+}
+
+</script>
+<style type="text/css">
+form .order_all{
+    border: #7f9db9 solid 1px;
+    padding: 8px 30px;
+    line-height: 24px;
+    margin: 20px auto;
+}
+form .order_all legend{
+	margin: 0;
+	width: auto;
+	border: 0;
+}
+form .order_all>label{
+    margin-right: 50px;
+}
+form .sub_right{
+	float: right;
+}
+</style>
+</block>

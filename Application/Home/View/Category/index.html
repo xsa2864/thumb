@@ -16,7 +16,6 @@
     <tr>
       <th>#</th>
       <th>分类名称</th>
-      <th>分类等级</th>
       <th>上级分类</th>
       <th>排序</th>
       <th>操作</th>
@@ -27,12 +26,11 @@
 	  <tr id="c_{$k}">
       <td>{$k}</td>
       <td>{$vo.name}</td>
-      <td>{$vo.level}</td>
       <td>顶级分类</td>
       <td>{$vo.sort}</td>
       <td>
-        <a href="javascript:cate_add('{$vo.name}',{$vo.pid},{$vo.id})">添加</a>
-        <a href="javascript:cate_edit({$vo.id},'{$vo.name}')">编辑</a>
+        <!-- <a href="javascript:cate_add('{$vo.name}',{$vo.pid},{$vo.id})">添加</a> -->
+        <a href="javascript:cate_edit({$vo.id})">编辑</a>
         <a href="javascript:del({$vo.id},'c_{$k}');">删除</a>
       </td>
     </tr>   
@@ -40,7 +38,6 @@
         <tr id="c_{$k}{$ck}">
            <td></td>
            <td>{$child.name}</td>
-           <td>{$child.level}</td>
            <td>{$vo.name}</td>
            <td>{$child.sort}</td>
            <td>
@@ -65,34 +62,42 @@
               <button type="button" data-dismiss="modal" aria-hidden="true" class="sui-close">×</button>
               <h4 id="myModalLabel" class="modal-title">添加分类</h4>
           </div>
-          <div class="modal-body sui-form form-horizontal">
-              <table class="sui-table table-bordered-simple">
-                <thead>
-                    <tr>
-                        <th>分类名称</th>
-                        <th>分类等级</th>
-                        <th>上级分类</th>
-                        <th>排序</th>
-                        <th>操作</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><input type="text" name="name" id="name" /></td>
-                        <td><input type="text" name="level" id="level" /></td>
-                        <td>
-                          <span id="pid_name"></span>
-                          <input type="hidden" name="pid" id="pid" />
-                        </td>
-                        <td><input type="text" name="sort" id="sort" /></td>
-                        <td data-supplierid="111">
-                            <input type="hidden" name="action" id="action" />
-                            <input type="hidden" name="cat_id" id="cat_id" />
-                            <button class="sui-btn btn-small J_addOneSupplier">保存</button>
-                        </td>
-                    </tr>
-                </tbody>
-              </table>
+          <div class="modal-body sui-form form-horizontal">              
+<form class="sui-form form-horizontal" action="#" id="op_form">
+  <div class="control-group">
+    <label class="control-label">归属分类：</label>
+    <div class="controls">
+      <span class="sui-dropdown dropdown-bordered select">
+        <span class="dropdown-inner">
+          <a id="drop4" role="button" data-toggle="dropdown" href="#" class="dropdown-toggle input-medium">
+          <input value="0" name="parent_id" type="hidden"><i class="caret"></i><span>主分类</span>
+          </a>
+          <ul id="menu4" role="menu" aria-labelledby="drop4" class="sui-dropdown-menu">
+            <volist name="tree" id="vo">    
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0);" value="{$vo.id}">{$vo.name}</a></li>
+            </volist>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0);" value="0">主分类</a></li>
+          </ul>
+        </span>
+      </span>
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label">分类名称：</label>
+    <input type="text" class="input-large" name="name">
+  </div>
+  <div class="control-group">
+    <label class="control-label">排序：</label>
+    <input type="text" class="input-large" name="sort">
+  </div>  
+  <div class="control-group">
+    <div class="controls">
+      <input type="hidden" name="id" id="id" />
+      <button type="button" class="sui-btn btn-primary" onclick="cate_submit()">保存</button>
+      <button type="reset" class="sui-btn" style="display: none;">重置</button>
+    </div>
+  </div>
+</form>              
           </div>
       </div>
   </div>
@@ -100,92 +105,76 @@
 
 
 <script>  
-  $(".J_addOneSupplier").click(function(){
-    var name = $("#name").val();
-    var level = $("#level").val();
-    var pid = $("#pid").val();
-    var seq = $("#seq").val();
-    var action = $("#action").val();
-    var cat_id = $("#cat_id").val();
+function cate_submit(){
+  var str = $('form').serialize();
+  console.log(str);
+  $.ajax({
+    url:"{:U('Category/edit')}",
+    type:'get',
+    data:str,
+    dataType:'json',
+    success:function(data){
+      if(data.code == 1){
+        window.location.reload();
+      }else{
+        alert(data.msg);
+      }
+    }
+  });
+}
+
+// 添加分类
+function cate_add(){
+  $("#myModalLabel").html("添加分类");    
+  document.getElementById("op_form").reset();
+  $("#drop4>span").html("顶级分类");
+  $("[name='id']").val(0);
+  $("[name='parent_id']").val(0);
+  $('#J_addsuppliers').click();
+}
+
+// 编辑分类
+function cate_edit(id,name){
+  $("#myModalLabel").html("编辑分类");
+  $.ajax({
+    url:"{:U('Category/getInfo')}",
+    type:'post',
+    data:{action:'getInfo',id:id},
+    dataType:'json',
+    success:function(data){
+      if(data.code == 1){
+          $("[name='name']").val(data.name);    
+          $("#drop4>span").html(name);
+          $("[name='parent_id']").val(data.parent_id);
+          $("[name='id']").val(data.id);
+          $("[name='sort']").val(data.sort);
+          if(data.parent_id == 0){
+            $("#drop4>span").html("顶级分类");
+          }
+      }else{
+          aler(data.msg);
+      }
+    }
+  });
+  $('#J_addsuppliers').click();
+}
+
+function del(cat_id,id){
+  if(confirm("确定删除!")){
     $.ajax({
-        url:"{:U('Category/edit')}",
+        url:"{:U('Category/del')}",
         type:'post',
-        data:{action:action,name:name,level:level,pid:pid,seq:seq,cat_id:cat_id},
+        data:{action:'del',id:cat_id},
         dataType:'json',
         success:function(data){
-            if(data.code == 1){
-               location.replace(location.href);
-            }else{
-              alert(data.msg);
-            }
+          if(data.code == 1){
+            $("#"+id).attr("style","display:none");
+          }else{
+            alert(data.msg);
+          }          
         }
-    });
-  });
-
-  // 添加分类
-  function cate_add(name,pid,cat_id){
-    $("#myModalLabel").html("添加分类");
-    $("#name").val('');
-    $("#level").val(0);
-    $("#seq").val(0);
-    $("#action").val('add');
-    $("#pid").val(cat_id);
-
-    if(pid == 0){
-      $("#pid_name").html("顶级分类");
-    }else if(name!=null){
-      $("#pid_name").html(name);
-    }
-
-    $('#J_addsuppliers').click();
+    })
   }
-
-  // 编辑分类
-  function cate_edit(id,name){
-    $("#myModalLabel").html("编辑分类");
-
-    $.ajax({
-      url:"{:U('Category/getInfo')}",
-      type:'post',
-      data:{action:'getInfo',id:id},
-      dataType:'json',
-      success:function(data){
-        if(data.code == 1){
-            $("#name").val(data.name);
-            $("#level").val(data.level);
-            $("#pid_name").html(name);
-            $("#pid").val(data.pid);
-            $("#id").val(data.id);
-            $("#sort").val(data.sort);
-            if(data.pid == 0){
-              $("#pid_name").html("顶级分类");
-            }
-        }else{
-            aler(data.msg);
-        }
-      }
-    });
-    $("#action").val('edit');
-    $('#J_addsuppliers').click();
-  }
-
-  function del(cat_id,id){
-    if(confirm("确定删除!")){
-        $.ajax({
-            url:"{:U('Category/del')}",
-            type:'post',
-            data:{action:'del',id:cat_id},
-            dataType:'json',
-            success:function(data){
-              if(data.code == 1){
-                alert(data.msg);
-                $("#"+id).attr("style","display:none");
-              }else{
-                alert(data.msg);
-              }          
-            }
-        })
-    }
-  }
+}
 </script>
 </block>

@@ -1,0 +1,58 @@
+<extend name="Public:base" />
+
+<block name="main">
+<br>
+<ul class="sui-breadcrumb">
+    <li><a href="#">首页</a></li>
+    <li class="active">会员列表</li>
+</ul>
+<a class="sui-btn btn-primary" href="{:U('Auth/group_edit')}">添加权限组</a>
+<br><br>
+<table class="sui-table table-bordered">
+  <thead>
+    <tr>
+      <th style="text-align: center;">序号</th>
+      <th>标题</th>
+      <th>描述</th>
+      <th style="text-align: center;">状态</th>
+      <th>操作</th>
+    </tr>
+  </thead>
+  <tbody>
+  	<volist name="list" id="vo" key="k">  	
+	  <tr id="{$k}">
+      <td style="text-align: center;">{$k}</td>
+      <td>{$vo.title}</td>   
+      <td>{$vo.describe}</td>
+      <td style="text-align: center;">{$vo.status}</td>
+      <td>
+        <a href="{:U('Auth/group_edit',array('id'=>$vo['id']))}">编辑</a>
+        <a href="javascript:group_del({$vo.id},'{$k}')">删除</a>
+      </td>
+    </tr> 
+  	</volist>
+  </tbody>
+</table>
+
+
+<script type="text/javascript">
+function group_del(id,k){
+  if(confirm("确定删除!")){
+    $.ajax({
+        url:"{:U('Auth/group_del')}",
+        type:'post',
+        data:{id:id},
+        dataType:'json',
+        success:function(data){
+          if(data.code == 1){
+            $("#"+k).hide("slow");
+          }else{ 
+           alert(data.msg);
+          }
+        }
+    });
+  }
+}
+
+</script>
+</block>
