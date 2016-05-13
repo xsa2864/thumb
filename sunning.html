@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<script type="text/javascript">
+	
+var m_time = $('#J-countdown').attr('data-time-begin')-800;             //时间戳-开始秒杀时间
+var e_time = new Date(parseInt(m_time)).toLocaleString().substr(0,24);  //可视化-开始秒杀时间
+
+$.ajax({
+    url: "/ajax/web/getSystemUnixTime.htm",
+    type: "post",
+    dataType: "json",
+    cache: false,
+    async: true,
+    success: function(data) {
+        now_time = data.currentTime;        //时间戳-服务器时间
+        local_time = new Date().getTime();  //时间戳-本地时间
+        differ_time = now_time-local_time;  //时间戳-服务器时间与本地时间差                 
+    }
+});
+
+function countdown(){
+  local_time = new Date().getTime();  //时间戳-本地时间
+  kill_time = local_time+differ_time; //时间戳-服务器时间
+  show_time = new Date(parseInt(kill_time)).toLocaleString().substr(0,24); //可视化-服务器时间
+}
+
+
+function cli_kill(){
+    msDetail.doMsKill();
+    countdown();
+    console.log('\n'+show_time+'\n');
+    if(kill_time >= m_time+2500){ 
+        console.log('\n结束\n');
+        var t = clearInterval(i);
+    }
+}
+var s = setInterval(function (){        
+        countdown();        
+        console.log('\n'+show_time+'=>'+e_time+'\n');
+        if(kill_time >= m_time){            
+            var e = clearInterval(s);
+            console.log('\n开始\n');
+            i = setInterval(cli_kill,430);
+        };
+},700);
+
+
+
+/*
+ * 用这个  $("#submit-btn").click();
+ */
+var m_time = $('#J-countdown').attr('data-time-begin')-800;
+var e_time = new Date(parseInt(m_time)).toLocaleString().substr(0,24);
+var show_time = 'start';
+function get_time(){
+	$.ajax({
+    	url: "/ajax/web/getSystemUnixTime.htm",
+    	type: "post",
+    	dataType: "json",
+    	cache: false,
+    	async: true,
+    	success: function(data) {
+    	    now_time = data.currentTime;        //时间戳-服务器时间
+    	    show_time = new Date(now_time).toLocaleString();        
+    	}
+	});
+}
+function cli_kill(){
+    msDetail.doMsKill();
+    get_time();
+    console.log('\n'+show_time+'\n');
+    if(now_time >= m_time+3200){ 
+        console.log('\n结束\n');
+        var t = clearInterval(i);
+    }
+}
+var s = setInterval(function (){        
+        get_time();        
+        console.log('\n'+show_time+'=>'+e_time+'\n');
+        if(now_time >= m_time){            
+            var e = clearInterval(s);
+            console.log('\n开始\n');
+            i = setInterval(cli_kill,360);
+        };
+},700);
+
+
+
+// 苏宁
+
+var m_time = $('#J-countdown').attr('data-time-begin')-800;
+var e_time = new Date(parseInt(m_time)).toLocaleString().substr(0,24);
+
+function get_time() {
+  $.getJSON("/ajax/getSystemTime.htm", function(data) {
+    now_time = data.currentTime;
+    show_time = new Date(now_time).toLocaleString();
+  });
+}
+
+function cli_kill(){
+    msDetail.doMsKill();
+    get_time();
+    console.log('\n'+show_time+'\n');
+    if(now_time >= m_time+2000){ 
+        console.log('\n结束\n');
+        var t = clearInterval(i);
+    }
+}
+var s = setInterval(function (){        
+        get_time();        
+        console.log('\n'+show_time+'=>'+e_time+'\n');
+        if(now_time >= m_time){            
+            var e = clearInterval(s);
+            console.log('\n开始\n');
+            i = setInterval(cli_kill,430);
+        };
+},700);
+
+// 第二种
+var m_time = $('#J-countdown').attr('data-time-begin')-800;
+var e_time = new Date(parseInt(m_time)).toLocaleString().substr(0,24);
+
+function get_time(){
+	$.ajax({
+    	url: "/ajax/web/getSystemUnixTime.htm",
+    	type: "post",
+    	dataType: "json",
+    	cache: false,
+    	async: true,
+    	success: function(data) {
+    	    now_time = data.currentTime;        //时间戳-服务器时间
+    	    show_time = new Date(now_time).toLocaleString();        
+    	}
+	});
+}
+function cli_kill(){
+    msDetail.doMsKill();
+    get_time();
+    console.log('\n'+show_time+'\n');
+    if(now_time >= m_time+3200){ 
+        console.log('\n结束\n');
+        var t = clearInterval(i);
+    }
+}
+var s = setInterval(function (){        
+        get_time();        
+        console.log('\n'+show_time+'=>'+e_time+'\n');
+        if(now_time >= m_time){            
+            var e = clearInterval(s);
+            console.log('\n开始\n');
+            i = setInterval(cli_kill,360);
+        };
+},1000);
+
+
+
+function initBuy() {
+    var URL = require('url');
+    var cookie = require('cookie');
+    var sellerId = parseInt(URL.getUrlParam('sellerid', location.href), 10);
+    var icid = oItemSkuInfo.mapwxskuinfo[lDisSkuId].lSkuid;
+    var buyNum = $('#num').val() - 0;
+    var addr_code = URL.getUrlParam('addr_code');
+    if (!addr_code) {
+        addr_code = cookie.get('addr_code');
+    }
+    var regsrc = '20.20006.20006010';
+    if (lDisId == 100511) {
+        regsrc = '20.20005.20005010';
+    }
+    var exchange = URL.getUrlParam('exchange');
+    var url = 'http://w.midea.com/wxorder/buyer/confirmorder?'
+      , presell_url = 'http://w.midea.com/wxorder/buyer/confirm_order_presell?'
+      , seckill_url = 'http://w.midea.com/wxorder/miao/confirmorder?';
+   var params = 'skuid=' + lDisSkuId 
+            + '&buynum=' + buyNum 
+            + '&disid=' + lDisId 
+            + '&icid=' + icid 
+            + '&addr_code=' + addr_code 
+            + '&regsrc=' + regsrc;
+    var auth_url = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx98e78d22de880f6a&redirect_uri=' + encodeURIComponent('https://w.midea.com/mlogin/wx?rurl=' + encodeURIComponent(url)) + '&response_type=code&scope=snsapi_base&state=#wechat_redirect';
+    if (nFlag && (nFlag == 1)) {
+        location.href = presell_url + params;
+    } else if (nFlag && (nFlag == 2)) {
+        location.href = seckill_url + params;
+    } else {
+        location.href = url + params;
+    }
+}
+
+
+
+   var URL = require('url');
+   var cookie = require('cookie');
+   var sellerId = parseInt(URL.getUrlParam('sellerid', location.href), 10);
+   var icid = oItemSkuInfo.mapwxskuinfo[lDisSkuId].lSkuid;
+   var buyNum = parseInt($('#num').val() - 0);
+   var addr_code = URL.getUrlParam('addr_code');
+    if (!addr_code) {
+        addr_code = cookie.get('addr_code');
+    }
+    var regsrc = '20.20006.20006010';
+    if (lDisSkuId == 100511) {
+        regsrc = '20.20005.20005010';
+    }
+   var url = 'https://mall.midea.com/order/buyer/confirm_order?'
+     , presell_url = 'https://mall.midea.com/order/buyer/confirm_order_presell?'
+     , seckill_url = 'https://mall.midea.com/miao/confirmorder?';
+   var params = 'skuid=' + lDisSkuId 
+   + '&buynum=' + buyNum 
+   + '&disid=' + lDisId 
+   + '&icid=' + icid 
+   + '&addr_code=' + addr_code 
+   + '&regsrc=' + regsrc;
+   if (nFlag && (nFlag == 1)) {
+       url = presell_url + params;
+   } else if (nFlag && (nFlag == 2)) {
+       url = seckill_url + params;
+   } else {
+       url = url + params;
+   }
+   if (cookie.getC('uid')) {
+       location.href = url;
+   } else {
+       initLogin(url);
+   }
+
+
+  
+/*
+ *  美的秒杀测试
+*/
+
+mXss = require('xss');                
+function getAddressList() {
+    var msg;
+    $.ajax({
+        url: '/my/address/get_addresslist',
+        type: 'get',
+        dataType: 'json',
+        cache: false
+    }).done(function(obj) {
+        if (obj.errcode == 0) {
+            setAddrTemplate(obj.addrInfoList, 0);
+        }
+    });
+}
+
+function setAddrTemplate(data, index) {
+    oAddrList = $.extend(true, [], data);
+    for (var k = 0; k < data.length; k++) {
+        var item = data[k];
+        if (item.nIsDefault) {
+            index = index ? index : k;
+        }
+        for (var key in item) {
+            if (typeof (item[key]) == 'string') {
+                item[key] = mXss.parse(item[key], 'html');
+            }
+            if (key == 'strProvince') {
+                item[key] = addrSubstr(item[key], 'province')
+            }
+            if (key == 'strCity') {
+                item[key] = addrSubstr(item[key], 'city')
+            }
+        }
+    }
+    checkedAddr = oAddrList[index];
+}
+function addrSubstr(str, type) {
+    if (!str) {
+        return '';
+    }
+    var provinceReg = /\u58EE\u65CF|\u56DE\u65CF|\u7EF4\u543E\u5C14|\u81EA\u6CBB\u533A|\u7701|\u5E02/g;
+    var cityReg = /\u58EE\u65CF|\u56DE\u65CF|\u6EE1\u65CF|\u7EF4\u543E\u5C14\u65CF|\u82D7\u65CF|\u5F5D\u65CF|\u571F\u5BB6\u65CF|\u85CF\65CF|\u8499\u53E4\u65CF|\u4F97\u65CF|\u5E03\u4F9D\u65CF|\u7476\u65CF|\u767D\u65CF|\u671D\u9C9C\u65CF|\u54C8\u5C3C\u65CF|\u9ECE\65CF|\u54C8\u8428\u514B\u65CF|\u50A3\u65CF|\u7572\u65CF|\u5088\u50F3\u65CF|\u4E1C\u4E61\u65CF|\u4EE1\u4F6C\u65CF|\u62C9\u795C\65CF|\u4F64\u65CF|\u6C34\u65CF|\u7EB3\u897F\u65CF|\u7F8C\u65CF|\u571F\u65CF|\u4EEB\u4F6C\u65CF|\u9521\u4F2F\u65CF|\u67EF\u5C14\514B\u5B5C\u65CF|\u666F\u9887\u65CF|\u8FBE\u65A1\u5C14\u65CF|\u6492\u62C9\u65CF|\u5E03\u6717\u65CF|\u6BDB\u5357\u65CF|\u5854\u5409u514B\u65CF|\u666E\u7C73\u65CF|\u963F\u660C\u65CF|\u6012\u65CF|\u9102\u6E29\u514B\u65CF|\u4EAC\u65CF|\u57FA\u8BFA\u65CF|\u5FB7\6602\u65CF|\u4FDD\u5B89\u65CF|\u4FC4\u7F57\u65AF\u65CF|\u88D5\u56FA\u65CF|\u4E4C\u5B5C\u522B\u514B\u65CF|\u95E8\u5DF4\u65CF|\u9102u4F26\u6625\u65CF|\u72EC\u9F99\u65CF|\u8D6B\u54F2\u65CF|\u9AD8\u5C71\u65CF|\u73DE\u5DF4\u65CF|\u5854\u5854\u5C14\u65CF|\u8499\53E4\u81EA\u6CBB\u5DDE|\u81EA\u6CBB\u5DDE|\u81EA\u6CBB\u53BF|\u53BF\u7EA7|\u884C\u653F|\u533A\u5212|\u533A|\u5E02/g;
+    switch (type) {
+    case 'province':
+        str = str.replace(provinceReg, '');
+        break;
+    case 'city':
+        str = str.replace(cityReg, '');
+        break;
+    }
+    return str;
+}
+
+getAddressList();
+
+var couponDiscountFee = 0;
+var activeId = $("[class='seckill_button']").attr('data-activeid');
+var dealtype = 7;
+var paytype =7;
+var invoice_type = 4;
+var invoice_head = $('.js_invoice_head_ok').html();
+var invoice_content = $('.js_invoice_content').html();
+var mCookie = require('cookie');
+var mUrl = require("url");
+var nBuyNum = mUrl.getUrlParam('buynum');
+var oSkuData = pageMess.oSkuInfoResp.oOrderNeedInfo;
+var nSkuid = oSkuData.lDisSkuId;
+var sku = [{
+    skuid: nSkuid,
+    buynum: nBuyNum
+}];
+
+dataStore = {
+    score: {
+        userTotalScore: 0,
+        maxAvailableScore: 0,
+        maxAvailableScoreFee: pageMess.oPriceResp.oPriceInfo.lMaxAvailableScoreFee,
+        userScoreDiscountFee: 0,
+        payScore: 0
+    },
+    eaccount: {
+        discountFee: 0,
+        maxAvailable: pageMess.oPriceResp.oPriceInfo.nUserEaccountMaxAvailable,
+        payEaccountValue: 0
+    },
+    oPriceInfo: {}
+}
+
+
+var oPriceInfo = $.extend(true, oSkuData.oPriceInfo, {
+    errcode: 0,
+    score_errcode: 0,
+    couponDiscountFee: couponDiscountFee,
+    buyNum: oSkuData.oPriceInfo.nPurchaseNum || nBuyNum
+});
+
+function mkorder(){
+    mCookie.setC('addr_code', encodeURIComponent([checkedAddr.strProvinceCode, checkedAddr.strCityCode, checkedAddr.strAreaCode].join(',')), 86400, '/', 'midea.com');
+    mCookie.setC('addr_text', encodeURIComponent([checkedAddr.strProvince, checkedAddr.strCity, checkedAddr.strArea].join(',')), 86400, '/', 'midea.com');
+   $.ajax({
+       url: '//event.midea.com/wxorder/miao/buy',
+       data: {
+           icid: mUrl.getUrlParam('icid'),
+           dealtype: dealtype,
+           paytype: paytype,
+           paychannel: 1,
+           tradesource: '',
+           sku: JSON.stringify(sku),
+           recvpostcode: '',
+           recvaddress: checkedAddr.strDetailMsg,
+           recvname: checkedAddr.strPersonName,
+           provinceCode: checkedAddr.strProvinceCode,
+           cityCode: checkedAddr.strCityCode,
+           regioncode: checkedAddr.strAreaCode,
+           recvphone: checkedAddr.strMobileNum,
+           addr_code: checkedAddr.strProvinceCode + ',' + checkedAddr.strCityCode + ',' + checkedAddr.strAreaCode,
+           invoiceType: invoice_type,
+           invoicehead: invoice_head,
+           invoicecontent: invoice_content,
+           disid: mUrl.getUrlParam('disid'),
+           sellerid: '',
+           payScore: dataStore.score.payScore,
+           payEaccountValue: dataStore.eaccount.payEaccountValue,
+           activeid: activeId,
+           skuid: mUrl.getUrlParam('skuid'),
+           'totalFee': oPriceInfo.lTotalPrice,
+           'adjustFee': 0,
+           'payment': oPriceInfo.lTotalPrice,
+           'itemTotalFee': oPriceInfo.lTotalItemFee,
+           'discountTotal': oPriceInfo.nDiscountFee,
+       },
+       type: 'get',
+       dataType: 'jsonp',
+       jsonp: 'callback',
+       jsonpCallback: 'seckill_jsonp_callback',
+       success: function(obj) {
+            console.log(obj);           
+       }
+   })
+}            
+      
+
+var i = setInterval(mkorder,700);
+clearInterval(i);
+
+var i='';
+function get_start(){
+    var com_time = 1463108398801;    
+    var time = new Date().getTime();
+    console.log(new Date(parseInt(time)).toLocaleString()+'========'+ new Date(parseInt(com_time)).toLocaleString());
+    if(time > com_time){
+        clearInterval(s);
+        i = setInterval(mkorder,700);
+    } 
+}
+var s = setInterval(get_start,700);
+
+/*
+ *  wapkill-----------
+ */
+
+    function seckillNow() {
+        if (killing) {
+            return false;
+        } else {
+            setTimeout(function() {
+                killing = false;
+            }
+            , 1000);
+            killing = true;
+        }
+        var selectedAddrInfo = pageMess.selectedAddrInfo
+          , errMsg = '';
+        if (!dataStorage.strInvoiceHead) {
+            dataStorage.strInvoiceHead = selectedAddrInfo.recvname;
+        }
+        if (!selectedAddrInfo.recvname || !selectedAddrInfo.recvregioncode || !selectedAddrInfo.recvaddress || !selectedAddrInfo.recvphone) {
+            errMsg = '请选择地址';
+            oMpopup = $.mpopup({
+                type: 'info',
+                icoType: 'info',
+                contentTxt: '请选择地址',
+                destroyAfterClose: true,
+                autoClose: 1000
+            }).show();
+        }
+        if (!dataStorage.strInvoiceHead) {
+            errMsg = '请填写发票抬头';
+        }
+        if (errMsg) {
+            oMpopup = $.mpopup({
+                type: 'info',
+                icoType: 'info',
+                contentTxt: errMsg,
+                destroyAfterClose: true,
+                autoClose: 2000
+            }).show();
+            killing = false;
+            return false;
+        } else {
+            killing = true;
+        }
+        if (oMpopup) {
+            oMpopup.close();
+        }
+        oMpopup = $.mpopup({
+            type: 'info',
+            icoType: 'info',
+            contentTxt: '秒杀中，请稍候...',
+            destroyAfterClose: true
+        }).show();
+        var oPriceInfo = mCalculate.getPriceInfo();
+        var reqUrl = '//event.midea.com/wxorder/miao/buy';
+        $.ajax({
+            url: reqUrl,
+            dataType: 'jsonp',
+            type: 'get',
+            timeout: timeout,
+            jsonpCallback: "seckill_jsonp_callback",
+            jsonp: 'callback',
+            data: {
+                'skuid': nSkuid,
+                'activeid': oPriceInfo.oTimeLimitDiscountInfo.lActiveId,
+                'icid': mUrl.getUrlParam('icid'),
+                'recvname': selectedAddrInfo.recvname,
+                'addrid': selectedAddrInfo.lAddrId,
+                'provinceCode': selectedAddrInfo.recvregioncode.substr(0, 2) + "0000",
+                'cityCode': selectedAddrInfo.recvregioncode.substr(0, 4) + "00",
+                'regioncode': selectedAddrInfo.recvregioncode,
+                'recvaddress': selectedAddrInfo.recvaddress,
+                'recvpostcode': '',
+                'recvphone': selectedAddrInfo.recvphone,
+                'disid': mUrl.getUrlParam('disid'),
+                'sellerid': mUrl.getUrlParam('sellerid'),
+                'invoiceType': dataStorage.nInvoiceType,
+                'invoicehead': dataStorage.strInvoiceHead,
+                'invoicecontent': dataStorage.strInvoiceContent,
+                'appenv': mUnipay.getAppEvn(),
+                'paychannel': mUnipay.getPayChannel(),
+                'paytype': mUnipay.getPayType(),
+                'payEaccountValue': dataStorage.lPayEaccountValue,
+                'payScore': dataStorage.lPayScore,
+                'totalFee': oPriceInfo.lTotalPrice,
+                'adjustFee': 0,
+                'payment': oPriceInfo.lTotalPrice,
+                'itemTotalFee': oPriceInfo.lTotalItemFee,
+                'discountTotal': oPriceInfo.nDiscountFee,
+            },
+            success: function(obj) {
+                oMpopup && oMpopup.close();
+                if (obj.errcode == 0) {
+                    _hmt.push(['_trackEvent', 'mmd', 'ajax', reqUrl + '[成功]', 1]);
+                    obj.data.nBoutNum = obj.data.nBoutNum > 0 ? obj.data.nBoutNum : -1;
+                    mCookie.setC('round', obj.data.nBoutNum, 1440, '/', 'midea.com');                  
+                } 
+            }
+        });
+    }
+
+
+</script>
+
+<body>
+
+
+</body>
+</html>

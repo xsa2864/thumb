@@ -40,7 +40,7 @@
       <td>{$item.title}</td>
       <td>{$item.name}</td>     
       <td>{$item.condition}</td>
-      <td>{$item.status}</td>
+      <td style="text-align: center;">{$item.status}</td>
       <td>
         <a href="javascript:auth_edit({$item.id},'{$vo.title}')">编辑</a>
         <a href="javascript:auth_del({$item.id},'ck_{$ck}')">删除</a>
@@ -134,7 +134,7 @@ function auth_del(id,ck){
 function auth_submit(){
   $str = $('form').serialize();
   $.ajax({
-    url:"{:U('Member/auth_edit')}",
+    url:"{:U('Auth/auth_edit')}",
     type:'get',
     data:$str,
     dataType:'json',
@@ -157,7 +157,7 @@ function rule_add(){
 function auth_edit(id,ptitle){  
   
   $.ajax({
-    url:"{:U('Member/auth_one_rule')}",
+    url:"{:U('Auth/auth_one_rule')}",
     type:'post',
     data:{id:id},
     dataType:'json',

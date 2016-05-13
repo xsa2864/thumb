@@ -8,7 +8,7 @@
     <li class="active">{$link}</li>
 </ul>
 
-<form class="sui-form sui-row-fluid form-horizontal" id="filterForm" action="" method="post">
+<form class="sui-form sui-row-fluid form-horizontal" id="filterForm" action="{:U('Auth/group_save')}" method="post">
 	<div class="span">
 	<div class="control-group">
 		<label class="control-label" for="input001">标题：</label>
@@ -50,6 +50,7 @@
 	<span class="sub_right">
 	<div class="control-group">
      	<div class="controls">
+     		<input type="hidden" name="id" value="{$info.id}">
      	  	<button type="submit" class="sui-btn btn-primary">提交保存</button>
      	</div>
     </div>
