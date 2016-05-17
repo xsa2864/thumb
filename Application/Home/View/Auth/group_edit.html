@@ -36,7 +36,7 @@
 	<fieldset class="order_all">
         <legend>
             <strong>
-               <input type="checkbox" onclick="check_all({$k},this.checked)" name="rules[]" value="{$vo.id}" id="c_{$k}" <if condition="$item.checked eq 1">checked="checked"</if>>
+               <input type="checkbox" onclick="check_all({$k},this.checked)" name="rules[]" value="{$vo.id}" id="c_{$k}" <if condition="$vo.checked eq 1">checked="checked"</if>>
                <label for="c_{$k}">{$vo.title}</label>
             </strong>
         </legend>

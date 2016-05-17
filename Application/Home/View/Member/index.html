@@ -6,7 +6,7 @@
     <li><a href="#">首页</a></li>
     <li class="active">会员列表</li>
 </ul>
-
+<button id="J_addsuppliers" data-toggle="modal" data-target="#J_addsuppliersDialog" data-width="large" data-backdrop="static" style="display: none;"></button>
 <table class="sui-table table-bordered">
   <thead>
     <tr>
@@ -23,7 +23,8 @@
       <td>{$vo.key}</td>     
       <td>{$vo.addtime|date='Y-m-d',###}</td>
       <td>
-        <a href="{:U('Member/edit',array('action'=>'edit','user_id'=>$vo['user_id']))}">编辑</a>
+        <a href="{:U('Member/edit',array('action'=>'edit','user_id'=>$vo['user_id']))}">编辑</a>|
+        <a href="javascript:role({$vo.user_id});">权限设定</a>|
         <a href="javascript:del({$vo.user_id},{$k})">删除</a>
       </td>
     </tr>   
@@ -31,7 +32,90 @@
   </tbody>
 </table>
 
+
+<div id="J_addsuppliersDialog" tabindex="-1" role="dialog" class="sui-modal hide fade" data-addsupplierurl="http://" data-getsuppliersurl="http://xxx">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+          <button type="button" data-dismiss="modal" aria-hidden="true" class="sui-close">×</button>
+          <h4 id="myModalLabel" class="modal-title">权限设定</h4>
+      </div>
+      <div class="modal-body sui-form form-horizontal">
+        <volist name="role" id="rvo">
+          <div class="span3">
+            <label>
+              <div class="msg-role">
+                <input type="checkbox" name="id" id="{$rvo.title}" value="{$rvo.id}"> <strong> {$rvo.title}</strong>     
+              </div>
+            </label>       
+          </div>
+        </volist>  
+        <div class="span">
+          <div class="control-group">
+            <div class="controls">
+              <input type="text" name="id" style="display: none;">
+              <input type="hidden" id="uid" name="uid">
+              <button type="button" class="sui-btn btn-primary" onclick="save_role()">保存设置</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style type="text/css">
+.msg-role{
+  padding: 15px 20px;
+  margin: 0px 10px 10px 0px;
+  background-color: #FFE4C4;
+  border: 1px solid rgba(236, 163, 163, 0.43);
+  border-radius: 10px;
+}
+</style>
+
 <script type="text/javascript">
+  function role(uid){
+    $.ajax({
+      url:"{:U('Auth/get_group_access')}",
+      type:'post',
+      data:{uid:uid},
+      dataType:'json',
+      success:function(data){
+        $("[type='checkbox']").prop("checked",'');
+        list = data.split(",");
+        for(var i=0;i<data.length;i++){
+          $("[value='"+data[i]+"']").prop("checked","checked");
+        }
+      }
+    })
+    $("[id='uid']").val(uid);
+    $("[id='J_addsuppliers']").click();
+  }
+  function save_role(){ 
+    var role_id = '';   
+    $("input[type='checkbox']").each(function(n,va){
+       if(va.checked){
+          if(role_id != ''){
+            role_id += ',';
+          }
+          role_id += va.value;
+       }
+    })
+    var uid = $("[id='uid']").val();
+    $.ajax({
+      url:"{:U('Auth/save_role')}",
+      type:'post',
+      data:{uid:uid,rules:role_id},
+      dataType:'json',
+      success:function(data){
+        if(data.code == 1){
+          $("[class='sui-close']").click();
+        }
+        alert(data.msg);
+      }
+    });
+  }
   function del(user_id,id){
     if(confirm("确定删除!")){
         $.ajax({

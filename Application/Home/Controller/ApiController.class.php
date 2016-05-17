@@ -64,6 +64,9 @@ class ApiController extends Controller {
   		}elseif($action == "get_category"){
         // 获取分类树
         $a_data = $this->get_category();
+      }elseif($action == "postage_price"){
+        // 获取运费
+        $a_data = $this->postage_price($pr_arr['goods_no'],$pr_arr['area_id']);
       }
   		isset($a_data['Result']) ? $return_msg['Result'] = $a_data['Result'] : '';
   		isset($a_data['ResultMsg']) ? $return_msg['ResultMsg'] = $a_data['ResultMsg'] : '';
@@ -356,5 +359,22 @@ class ApiController extends Controller {
         }
       }
       return $tree;
+  }
+
+  // 商品运费信息
+  public function postage_price($goods_no,$area_id){
+
+    if($goods_no && $area_id){      
+      $sql = "SELECT gp.source_id,g.goods_no,gp.price FROM th_goods_postage gp
+            LEFT JOIN th_goods g ON g.source_id=gp.source_id
+            WHERE g.goods_no in ($goods_no) and gp.area_id='$area_id'  GROUP BY gp.source_id";
+      $result = M()->query($sql);    
+      if($result){
+        $return_msg['Result'] = "T";
+        $return_msg['ResultMsg'] = "success";     
+        $return_msg['Content'] = $result;     
+      }
+    }
+    return $return_msg;
   }
 }

@@ -6,6 +6,9 @@ class MemberController extends Controller {
 	public function index(){
 		$data = M('users')->select();
 		$this->assign("data",$data);
+
+        $role = M("auth_group")->field("id,title")->select();
+        $this->assign("role",$role);
 		$this->display();
 	}
 	

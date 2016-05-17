@@ -1,0 +1,171 @@
+<extend name="Public:base" />
+
+<block name="main">
+<br>
+<ul class="sui-breadcrumb">
+    <li><a href="#">首页</a></li>
+    <li class="active">邮费列表</li>
+</ul>
+
+<button class="sui-btn btn-primary" onclick="cate_add()">添加邮费</button>
+<button id="J_addsuppliers" data-toggle="modal" data-target="#J_addsuppliersDialog" data-width="large" data-backdrop="static" style="display: none">添加邮费</button>
+
+
+<table class="sui-table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>货源地</th>
+      <th>商品id</th>
+      <th>到达目的地</th>
+      <th>价格（货源地到目的地价格）</th>
+      <th>操作</th>
+    </tr>
+  </thead>
+  <tbody>
+  	<volist name="postage" id="vo" key="k">  	
+	  <tr id="{$k}">
+      <td>{$k}</td>
+      <td>{$vo.name}</td>
+      <td>{$vo.goods_id}</td>
+      <td>{$vo.area_name}</td>
+      <td>{$vo.price}</td>
+      <td>
+        <!-- <a href="javascript:cate_add('{$vo.name}',{$vo.pid},{$vo.id})">添加</a> -->
+        <a href="javascript:show_edit({$vo.id})">编辑</a>
+        <a href="javascript:del({$vo.id},'{$k}');">删除</a>
+      </td>
+    </tr>          
+  	</volist>
+  </tbody>
+</table>
+
+
+
+
+<div id="J_addsuppliersDialog" tabindex="-1" role="dialog" class="sui-modal hide fade" data-addsupplierurl="http://" data-getsuppliersurl="http://xxx">
+
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <button type="button" data-dismiss="modal" aria-hidden="true" class="sui-close">×</button>
+              <h4 id="myModalLabel" class="modal-title">添加邮费</h4>
+          </div>
+          <div class="modal-body sui-form form-horizontal">  
+
+<form class="sui-form form-horizontal" action="#" id="op_form">
+  <div class="control-group">
+    <label class="control-label">货源地：</label>
+    <div class="controls">
+      <span class="sui-dropdown dropdown-bordered select">
+        <select name="source_id" class="input-large">
+          <option>请选择</option>   
+          <volist name="form_list" id="vo">
+          <option value="{$vo.id}">{$vo.name}</option>   
+          </volist>
+        </select>
+      </span>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <label class="control-label">目的地：</label>
+    <div class="controls">
+      <span class="sui-dropdown dropdown-bordered select">
+        <select name="area_id" class="input-large">
+          <option>请选择</option>   
+          <volist name="area" id="vo">
+          <option value="{$vo.area_id}">{$vo.area_name}</option>   
+          </volist>
+        </select>
+      </span>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <label class="control-label">价格：</label>
+    <input type="text" class="input-large" name="price" placeholder="0.00">
+  </div>  
+
+  <div class="control-group">
+    <div class="controls">
+      <input type="hidden" name="id" id="id" value="{$vo.id}"/>
+      <button type="button" class="sui-btn btn-primary" onclick="postage_submit()">保存</button>
+    </div>
+  </div>
+
+</form>              
+          </div>
+      </div>
+  </div>
+</div>
+
+
+<script>  
+function postage_submit(){
+  var str = $('form').serialize();
+  $.ajax({
+    url:"{:U('Goods/postage_edit')}",
+    type:'get',
+    data:str,
+    dataType:'json',
+    success:function(data){
+      if(data.code == 1){
+        window.location.reload();
+      }else{
+        alert(data.msg);
+      }
+    }
+  });
+}
+
+// 添加分类
+function cate_add(){
+
+  document.getElementById("op_form").reset();
+  $('#J_addsuppliers').click();
+}
+
+// 编辑分类
+function show_edit(id){
+  $("#myModalLabel").html("编辑运费");
+  $.ajax({
+    url:"{:U('Goods/getInfo')}",
+    type:'post',
+    data:{id:id},
+    dataType:'json',
+    success:function(data){
+      if(data.code == 1){
+        $("[name='price']").val(data.price);  
+        $("[name='id']").val(data.id); 
+        $("[name='source_id'] option[value='"+data.source_id+"']").prop("selected","true") 
+        $("[name='area_id'] option[value='"+data.area_id+"']").prop("selected","true")        
+        $('#J_addsuppliers').click();
+      }else{
+          alert(data.msg);
+          return false;
+      }
+    }
+  });
+  
+}
+
+function del(postageid,id){
+  if(confirm("确定删除!")){
+    $.ajax({
+        url:"{:U('Goods/postage_del')}",
+        type:'post',
+        data:{id:postageid},
+        dataType:'json',
+        success:function(data){
+          if(data.code == 1){
+            $("#"+id).slideUp("slow");      
+          }else{
+            alert(data.msg);
+          }          
+        }
+    })
+  }
+}
+</script>
+</block>

@@ -1,0 +1,116 @@
+<extend name="Public:base" />
+
+<block name="main">
+<br>
+<ul class="sui-breadcrumb">
+    <li><a href="#">首页</a></li>
+    <li class="active">货源地列表</li>
+</ul>
+<p>
+  <a href="javascript:source_add();" class="sui-btn btn-info"><i class="sui-icon icon-touch-plus"></i>添加货源地</a>
+</p>
+
+<table class="sui-table table-bordered">
+  <thead>
+    <tr>
+      <th style="width: 30px;text-align: center;">编号</th>
+      <th>名称</th>      
+      <th>操作</th>
+    </tr>
+  </thead>
+  <tbody>
+  	<volist name="data" id="vo" key="k">  	
+	  <tr id="{$k}">
+      <td style="text-align: center;">{$k}</td>
+      <td>{$vo.name}</td>
+      <td>
+        <a href="javascript:show_edit({$vo.id},'{$vo.name}')">编辑</a>
+        <a href="javascript:del({$vo.id},{$k})">删除</a>
+      </td>
+    </tr>   
+  	</volist>
+  </tbody>
+</table>
+
+
+<button id="J_addsuppliers" data-toggle="modal" data-target="#J_addsuppliersDialog" data-width="large" data-backdrop="static" style="display: none;"></button>
+<div id="J_addsuppliersDialog" tabindex="-1" role="dialog" class="sui-modal hide fade" data-addsupplierurl="http://" data-getsuppliersurl="http://xxx">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <button type="button" data-dismiss="modal" aria-hidden="true" class="sui-close">×</button>
+              <h4 id="myModalLabel" class="modal-title">添加货源地</h4>
+          </div>
+          <div class="modal-body sui-form form-horizontal">
+<form class="sui-form form-horizontal" action="#" id="op_form">
+  <div class="control-group">
+    <label class="control-label">货源地名称：</label>
+    <input type="text" class="input-large" name="name">
+
+    <div class="controls">
+      <input type="text" name="id" style="display: none;">
+      <button type="button" class="sui-btn btn-primary" onclick="source_submit()">保存</button>
+    </div>
+  </div>
+</form>
+          </div>
+      </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  function del(goods_id,id){
+    if(confirm("确定删除!")){
+        $.ajax({
+            url:"{:U('Goods/del')}",
+            type:'post',
+            data:{action:'del',goods_id:goods_id},
+            dataType:'json',
+            success:function(data){
+              if(data.code == 1){
+                alert(data.msg);
+                $("tbody tr:nth-child("+id+")").attr("style","display:none");
+              }else{
+                alert(data.msg);
+              }          
+            }
+        })
+    }
+  }
+  function source_add(){
+    document.getElementById("op_form").reset();
+    $("[id='J_addsuppliers']").click();
+  }
+  function source_submit() {
+    var name = $("[name='name']").val();
+    var id = $("[name='id']").val();
+    $.getJSON("{:U('Goods/source_edit')}",
+      {id:id,name: name},
+      function(data) {
+        if (data.code == 1) {
+          window.location.reload()
+        } else {
+          alert(data.msg);
+        }
+      }
+    )
+  }
+  function show_edit(id,name){
+     $("[name='id']").val(id);
+     $("[name='name']").val(name);
+     $("[id='J_addsuppliers']").click();
+  }
+  function del(id,did){
+    $.getJSON("{:U('Goods/source_del')}",
+      {id:id},
+      function(data) {
+        if (data.code == 1) {
+          $("#"+did).slideUp("slow");      
+        } else {
+          alert(data.msg);
+        }
+      }
+    )
+  }
+</script>
+</block>

@@ -9,7 +9,65 @@ class AuthController extends Controller {
         $this->assign("list",$list);
         $this->display();
 	}	
-	
+	//新增或者更新权限组
+    public function group_save(){
+
+        $id = I('id');
+        $data = I();
+        unset($data['id']);
+        $data['status'] = I('status') ? 1 : 0;
+        $data['rules'] = implode(',', I('rules'));
+        $auth_rule = M("auth_group");
+
+        if($id){
+            $result = $auth_rule->where("id='$id'")->save($data);
+        }else{
+            $result = $auth_rule->data($data)->add();
+        }
+
+        if($result){
+            $this->redirect('Auth/index');
+        }else{
+            $this->error("操作失败!");
+        }
+        
+    }
+    //设定权限
+    public function save_role(){
+        $rules = I("rules");
+        $user_id = I("uid");
+        $arr = explode(',', $rules);
+
+        $re_msg['code'] = 0;
+        $re_msg['msg'] = "更新失败!";
+        $access = M('auth_group_access');
+
+        if($access->where("uid='$user_id'")->delete()){
+            foreach ($arr as $key => $value) {
+                $datalist[] = array('uid'=>$user_id,'group_id'=>$value);
+            }
+
+            if($access->addAll($datalist)){
+                $re_msg['code'] = 1;
+                $re_msg['msg'] = "更新成功!";
+            }            
+        }
+        echo json_encode($re_msg);
+    }
+    // 获取权限组信息
+    public function get_group_access(){
+        $uid = I('uid');
+        $access = M('auth_group_access');
+        $result = $access->where("uid='$uid'")->field("group_id")->select();
+        $group_id = '';
+        foreach ($result as $key => $value) {
+            if($group_id != ''){
+                $group_id .= ',';
+            }
+            $group_id .= $value['group_id'];
+        }
+        echo json_encode($group_id);
+    }
     // 删除权限组
     public function group_edit(){
         $id = I('id');
